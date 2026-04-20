@@ -9,13 +9,6 @@ package el.guardián.de.cúllar.vega.rpg;
  *
  * @author EAG
  */
-public class ElGuardiánDeCúllarVegaRPG {
-
-    /**
-     * @param args the command line arguments
-     */
-          public static void main(String[] args) {
-	// TODO code application logic here
-          }
-    
+public class Jugador {
+         
 }
