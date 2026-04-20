@@ -9,7 +9,7 @@ package el.guardián.de.cúllar.vega.rpg;
  *
  * @author EAG
  */
-public class ElGuardiánDeCúllarVegaRPG {
+public class ElGuardianDeCullarVegaRPG {
 
     /**
      * @param args the command line arguments
