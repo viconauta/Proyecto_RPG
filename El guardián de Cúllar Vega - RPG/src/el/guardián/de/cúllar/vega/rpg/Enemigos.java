@@ -13,21 +13,54 @@ public class Enemigos extends Personaje{
     //Atributos
     private TipoDificultad dificultad;
     private String tipo;
+    
+    public Enemigos(){
+    super();
+    this.dificultad = TipoDificultad.Facil;
+    this.tipo = "Sin tipo";
 }
 
-//Constructor por defecto
+    //Constructor por parametros
+    public Enemigos(TipoDificultad dificultad, String tipo, Personaje personaje){
+        super(personaje);
+        this.dificultad = dificultad;
+        this.tipo = tipo;
+    }
+
+    //Constructor de copia
+    public Enemigos(Enemigos enemigos){
+        this.dificultad = enemigos.dificultad;
+        this.tipo = enemigos.tipo;
+    }
+
+    //Getters
+    public TipoDificultad getDificultad() {
+        return dificultad;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    //Setters
+    public void setDificultad(TipoDificultad dificultad) {
+        this.dificultad = dificultad;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+    
+    //Metodos
+    public int decidirAccion(){
+
+    }
+
+    //ToString
+    @Override
+    public String toString() {
+        return "Enemigo: " + tipo + " (Dificultad: " + dificultad + ") " + super.toString();
+    }
+}
 
 
-//Constructor por parametros
-
-
-//Constructor de copia
-
-
-//Getters
-
-
-//Setters
-
-
-//ToString
