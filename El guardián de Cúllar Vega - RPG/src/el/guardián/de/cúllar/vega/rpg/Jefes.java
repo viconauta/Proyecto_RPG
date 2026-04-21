@@ -30,7 +30,7 @@ public class Jefes extends Enemigos{
 
     //Getters
     public Habilidad getHabilidadEspecial() {
-        return habilidadEspecial;
+        return this.habilidadEspecial;
     }
 
     //Setters
@@ -46,7 +46,7 @@ public class Jefes extends Enemigos{
     //ToString
     @Override
     public String toString() {
-        return "Jefes{" + "habilidadEspecial=" + habilidadEspecial + '}';
+        return "Jefes{" + "habilidadEspecial=" + this.habilidadEspecial + '}';
     }
     
 

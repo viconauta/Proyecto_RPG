@@ -35,11 +35,11 @@ public class Enemigos extends Personaje{
 
     //Getters
     public TipoDificultad getDificultad() {
-        return dificultad;
+        return this.dificultad;
     }
 
     public String getTipo() {
-        return tipo;
+        return this.tipo;
     }
 
     //Setters
@@ -59,7 +59,7 @@ public class Enemigos extends Personaje{
     //ToString
     @Override
     public String toString() {
-        return "Enemigo: " + tipo + " (Dificultad: " + dificultad + ") " + super.toString();
+        return "Enemigo: " + this.tipo + " (Dificultad: " + this.dificultad + ") " + super.toString();
     }
 }
 

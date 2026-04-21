@@ -27,11 +27,11 @@ public class Juego {
 
     //Getters
     public Jugador getJugador() {
-        return jugador;
+        return this.jugador;
     }
 
     public Historia getHistoria() {
-        return historia;
+        return this.historia;
     }
 
     //Setters
@@ -63,7 +63,7 @@ public class Juego {
     //ToString
     @Override
     public String toString() {
-        return "Juego{" + "jugador=" + jugador + ", historia=" + historia + '}';
+        return "Juego{" + "jugador=" + this.jugador + ", historia=" + this.historia + '}';
     }
     
     
