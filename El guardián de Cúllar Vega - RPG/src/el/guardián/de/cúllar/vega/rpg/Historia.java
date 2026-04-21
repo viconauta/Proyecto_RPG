@@ -28,17 +28,17 @@ public class Historia {
 
     //Constructor de copia
     public Historia(Historia historia) {
-            this.salas = historia.getSalas(); 
-            this.salaActual = historia.getSalaActual();    
+            this.salas = historia.salas.clone(); 
+            this.salaActual = historia.salaActual;    
     }
 
     // Getters 
     public Sala[] getSalas() {
-        return salas.clone();
+        return this.salas.clone();
     }
 
     public int getSalaActual() {
-        return salaActual;
+        return this.salaActual;
     }
 
     // Setters
