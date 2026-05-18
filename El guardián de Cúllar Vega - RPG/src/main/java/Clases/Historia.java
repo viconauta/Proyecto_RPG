@@ -1,14 +1,14 @@
 package Clases;
+import java.util.ArrayList;
 
 public class Historia {
     // Atributos
-    private Sala[] salas;
-    private int salaActual;
+    private ArrayList<Sala> salas;
+    private int id_sala;
 
     //Constructor por defecto
     public Historia() {
-        this.salas = new Sala[0];
-        this.salaActual = 0;
+        this.salas = new ArrayList<>();
     }
 
     //Constructor por parametros
