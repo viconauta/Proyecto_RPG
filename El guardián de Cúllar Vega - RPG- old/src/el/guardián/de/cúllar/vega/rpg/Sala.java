@@ -12,7 +12,7 @@ public class Sala {
 
     // Atributos
     private String descripcion;
-    private Enemigo enemigo;
+    private Enemigos enemigo;
     private boolean completada;
     private int recompensa;
 
@@ -24,7 +24,7 @@ public class Sala {
     }
 
     //Constructor por parametros
-    public Sala(String d, Enemigo e, int r) {
+    public Sala(String d, Enemigos e, int r) {
         this.descripcion = d;
         this.enemigo = e;
         this.completada = false;
@@ -44,7 +44,7 @@ public class Sala {
         return this.descripcion;
     }
 
-    public Enemigo getEnemigo() {
+    public Enemigos getEnemigo() {
         return this.enemigo;
     }
 
@@ -61,7 +61,7 @@ public class Sala {
         this.descripcion = d;
     }
 
-    public void setEnemigo(Enemigo e) {
+    public void setEnemigo(Enemigos e) {
         this.enemigo = e;
     }
 

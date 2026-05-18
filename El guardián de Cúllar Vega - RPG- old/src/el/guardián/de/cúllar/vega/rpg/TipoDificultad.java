@@ -9,5 +9,5 @@ package el.guardián.de.cúllar.vega.rpg;
  * @author anton
  */
 public enum TipoDificultad {
-    Facil, Normal, Dificil
+    Facil, Normal, Dificil;
 }

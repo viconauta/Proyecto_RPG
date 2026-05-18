@@ -1,26 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package el.guardián.de.cúllar.vega.rpg;
+package Clases;
 
-/**
- *
- * @author pablo
- */
 public class Juego {
     //Atributos
+
     private Jugador jugador;
     private Historia historia;
-    
+
     //Constructor por parametros
-    public Juego(Jugador jugador, Historia historia){
+    public Juego(Jugador jugador, Historia historia) {
         this.jugador = jugador;
         this.historia = historia;
     }
 
     //Constructor de copia
-    public Juego(Juego juego){
+    public Juego(Juego juego) {
         this.jugador = juego.jugador;
         this.historia = juego.historia;
     }
@@ -42,32 +35,27 @@ public class Juego {
     public void setHistoria(Historia historia) {
         this.historia = historia;
     }
-    
+
     //Metodos
-    public void iniciar(){
-        
+    public void iniciar() {
+
     }
-    
-    public void mover(char tecla){
-        
+
+    public void mover(char tecla) {
+
     }
-    
-    public void entrarSala(){
-        
+
+    public void entrarSala() {
+
     }
-    
-    public void comprabarFin(){
-        
+
+    public void comprabarFin() {
+
     }
-    
+
     //ToString
     @Override
     public String toString() {
         return "Juego{" + "jugador=" + this.jugador + ", historia=" + this.historia + '}';
-    }
-    
-    
-
-    
     }
 }
