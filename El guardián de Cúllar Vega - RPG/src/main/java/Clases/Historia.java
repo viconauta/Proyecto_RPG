@@ -1,13 +1,29 @@
 package Clases;
+import com.google.gson.Gson;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
-public class Historia {
+public class Historia  {
     // Atributos
     private ArrayList<Sala> salas;
     private int id_sala;
 
     //Constructor por defecto
-    public Historia() {
+    public Historia() throws FileNotFoundException {
+        Gson gson = new Gson();
+        try {
+            FileReader fr = new FileReader(Ruta.RUTA_SALAS);
+            Historia historia = gson.fromJson(fr, Historia.class);
+
+            fr.close();
+        }catch(FileNotFoundException e) {
+            System.out.println("No se encontro el archivo.");
+        }catch(IOException e) {
+            System.out.println("Archivo no encontrado");
+        }
         this.salas = new ArrayList<>();
     }
 
