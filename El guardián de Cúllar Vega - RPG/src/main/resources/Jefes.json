@@ -1,0 +1,49 @@
+{
+  "jefes": [
+    {
+      "id_enemigo": 5,
+      "tipo": "Rey Cavernícola",
+      "dificultad": "extrema",
+      "habilidadEspecial": {
+        "nombre": "Terremoto Devastador",
+        "descripcion": "Golpea el suelo aturdiendo a todos los jugadores cercanos."
+      }
+    },
+    {
+      "id_enemigo": 10,
+      "tipo": "Reina Arácnida",
+      "dificultad": "dificil",
+      "habilidadEspecial": {
+        "nombre": "Telaraña Paralizante",
+        "descripcion": "Inmoviliza al objetivo durante 3 turnos."
+      }
+    },
+    {
+      "id_enemigo": 15,
+      "tipo": "Lich Supremo",
+      "dificultad": "extrema",
+      "habilidadEspecial": {
+        "nombre": "Invocar Horda",
+        "descripcion": "Revive a 3 no-muertos caídos para que luchen a su lado."
+      }
+    },
+    {
+      "id_enemigo": 20,
+      "tipo": "Archimago Corrupto",
+      "dificultad": "extrema",
+      "habilidadEspecial": {
+        "nombre": "Tormenta de Meteoros",
+        "descripcion": "Inflige daño de fuego masivo en área."
+      }
+    },
+    {
+      "id_enemigo": 21,
+      "tipo": "Leviatán Abisal",
+      "dificultad": "dificil",
+      "habilidadEspecial": {
+        "nombre": "Tsunami",
+        "descripcion": "Arrastra a los jugadores y reduce su velocidad de ataque."
+      }
+    }
+  ]
+}

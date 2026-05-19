@@ -1,0 +1,84 @@
+{
+  "enemigos": [
+    { "id": 1,
+      "nombre": "criatura cavernícola",
+      "dificultad": "facil"
+    },
+    { "id": 2,
+      "nombre": "arácnido",
+      "dificultad": "facil"
+    },
+    { "id": 3,
+      "nombre": "no-muerto",
+      "dificultad": "media"
+    },
+    { "id": 4,
+      "nombre": "espíritu",
+      "dificultad": "media"
+    },
+    { "id": 5,
+      "nombre": "gelatinoso",
+      "dificultad": "facil"
+    },
+    { "id": 6,
+      "nombre": "humanoide hostil",
+      "dificultad": "media"
+    },
+    { "id": 7,
+      "nombre": "cultista",
+      "dificultad": "media"
+    },
+    { "id": 8,
+      "nombre": "bestia voladora",
+      "dificultad": "facil"
+    },
+    { "id": 9,
+      "nombre": "mago oscuro",
+      "dificultad": "dificil"
+    },
+    { "id": 10,
+      "nombre": "roedor mutado",
+      "dificultad": "facil"
+    },
+    { "id": 11,
+      "nombre": "gigante",
+      "dificultad": "dificil"
+    },
+    { "id": 12,
+      "nombre": "elemental de fuego",
+      "dificultad": "dificil"
+    },
+    { "id": 13,
+      "nombre": "constructo helado",
+      "dificultad": "dificil"
+    },
+    { "id": 14,
+      "nombre": "zombi",
+      "dificultad": "facil"
+    },
+    { "id": 15,
+      "nombre": "asesino",
+      "dificultad": "dificil"
+    },
+    { "id": 16,
+      "nombre": "gárgola",
+      "dificultad": "media"
+    },
+    { "id": 17,
+      "nombre": "serpiente acuática",
+      "dificultad": "facil"
+    },
+    { "id": 18,
+      "nombre": "demonio menor",
+      "dificultad": "dificil"
+    },
+    { "id": 19,
+      "nombre": "caballero espectral",
+      "dificultad": "dificil"
+    },
+    { "id": 20,
+      "nombre": "ángel caído",
+      "dificultad": "dificil"
+    }
+  ]
+}
