@@ -4,5 +4,7 @@ public class Ruta {
     private Ruta() {
     }
 
-    public static final String RUTA_SALAS = "./src/main/resources/Salas.json";
+    public static final String RUTA_RESOURCES = "./src/main/resources/";
+    public static final String RUTA_SALAS = RUTA_RESOURCES + "Salas.json";
+
 }

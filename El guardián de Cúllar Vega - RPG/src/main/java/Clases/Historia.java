@@ -27,7 +27,7 @@ public class Historia  {
         this.salas = new ArrayList<>();
     }
 
-    //Constructor por parametros
+    //Constructor por parametros CAMBIAR CONSTRUCTOR PARA RECIBIR POR PARAMETROS OTRO JSON 
     public Historia(Sala[] salas, int salaActual) {
         this.salas = salas.clone();
         this.salaActual = salaActual;
