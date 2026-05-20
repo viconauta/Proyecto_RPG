@@ -12,58 +12,50 @@ public class Historia  {
     private int id_sala;
 
     //Constructor por defecto
-    public Historia() throws FileNotFoundException {
+    private Historia(){
+        this.salas = null;
+        this.id_sala = 0;
+    }
+
+    public Historia(String ruta) throws FileNotFoundException {
         Gson gson = new Gson();
+        Historia historiaTemporal = new Historia();
         try {
-            FileReader fr = new FileReader(Ruta.RUTA_SALAS);
-            Historia historia = gson.fromJson(fr, Historia.class);
+            FileReader fr = new FileReader(ruta);
+            historiaTemporal = gson.fromJson(fr, Historia.class);
 
             fr.close();
+
+            this.salas = historiaTemporal.salas;
         }catch(FileNotFoundException e) {
             System.out.println("No se encontro el archivo.");
         }catch(IOException e) {
             System.out.println("Archivo no encontrado");
         }
-        this.salas = new ArrayList<>();
-    }
-
-    //Constructor por parametros CAMBIAR CONSTRUCTOR PARA RECIBIR POR PARAMETROS OTRO JSON 
-    public Historia(Sala[] salas, int salaActual) {
-        this.salas = salas.clone();
-        this.salaActual = salaActual;
     }
 
     //Constructor de copia
     public Historia(Historia historia) {
-        this.salas = historia.salas.clone();
-        this.salaActual = historia.salaActual;
+        this.salas = new ArrayList<>(historia.salas);
+        this.id_sala = historia.id_sala;
     }
 
     // Getters
-    public Sala[] getSalas() {
-        return this.salas.clone();
+    public ArrayList<Sala> getSalas() {
+        return this.salas;
     }
 
-    public int getSalaActual() {
-        return this.salaActual;
-    }
-
-    // Setters
-    public void setSalas(Sala[] salas) {
-        this.salas = salas.clone();
-    }
-
-    public void setSalaActual(int salaActual) {
-        this.salaActual = salaActual;
+    public int getId_sala() {
+        return this.id_sala;
     }
 
     // Método toString
     @Override
     public String toString() {
-        String imprimir = "Sala actual:" + this.salaActual +
+        String imprimir = "Sala actual:" + this.id_sala +
                 "Lista de Salas:\n";
-        for(int i=0; i < this.salas.length; i++){
-            imprimir += "-" + this.salas[i];
+        for(Sala s: this.salas){
+            imprimir += "-" + s;
         }
         return imprimir;
 
