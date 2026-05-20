@@ -1,6 +1,6 @@
 package Clases;
 
-public class Enemigo {
+public class Enemigo extends Personaje {
     //Atributos
     private TipoDificultad dificultad;
     private String tipo;
@@ -12,14 +12,14 @@ public class Enemigo {
     }
 
     //Constructor por parametros
-    public Enemigo(TipoDificultad dificultad, String tipo, Personaje personaje){
-        super(personaje);
+    public Enemigo(TipoDificultad dificultad, String tipo, String nombre){
+        super(nombre);
         this.dificultad = dificultad;
         this.tipo = tipo;
     }
 
     //Constructor de copia
-    public Enemigo(Enemigos enemigos){
+    public Enemigo(Enemigo enemigos){
         this.dificultad = enemigos.dificultad;
         this.tipo = enemigos.tipo;
     }

@@ -2,83 +2,83 @@
   "enemigos": [
     { "id": 1,
       "nombre": "criatura cavernícola",
-      "dificultad": "facil"
+      "TipoDificultad": "Facil"
     },
     { "id": 2,
       "nombre": "arácnido",
-      "dificultad": "facil"
+      "TipoDificultad": "Facil"
     },
     { "id": 3,
       "nombre": "no-muerto",
-      "dificultad": "media"
+      "TipoDificultad": "Media"
     },
     { "id": 4,
       "nombre": "espíritu",
-      "dificultad": "media"
+      "TipoDificultad": "Media"
     },
     { "id": 5,
       "nombre": "gelatinoso",
-      "dificultad": "facil"
+      "TipoDificultad": "Facil"
     },
     { "id": 6,
       "nombre": "humanoide hostil",
-      "dificultad": "media"
+      "TipoDificultad": "Media"
     },
     { "id": 7,
       "nombre": "cultista",
-      "dificultad": "media"
+      "TipoDificultad": "media"
     },
     { "id": 8,
       "nombre": "bestia voladora",
-      "dificultad": "facil"
+      "TipoDificultad": "Facil"
     },
     { "id": 9,
       "nombre": "mago oscuro",
-      "dificultad": "dificil"
+      "TipoDificultad": "Dificil"
     },
     { "id": 10,
       "nombre": "roedor mutado",
-      "dificultad": "facil"
+      "TipoDificultad": "Facil"
     },
     { "id": 11,
       "nombre": "gigante",
-      "dificultad": "dificil"
+      "TipoDificultad": "Dificil"
     },
     { "id": 12,
       "nombre": "elemental de fuego",
-      "dificultad": "dificil"
+      "TipoDificultad": "Dificil"
     },
     { "id": 13,
       "nombre": "constructo helado",
-      "dificultad": "dificil"
+      "TipoDificultad": "Dificil"
     },
     { "id": 14,
       "nombre": "zombi",
-      "dificultad": "facil"
+      "TipoDificultad": "Facil"
     },
     { "id": 15,
       "nombre": "asesino",
-      "dificultad": "dificil"
+      "TipoDificultad": "Dificil"
     },
     { "id": 16,
       "nombre": "gárgola",
-      "dificultad": "media"
+      "TipoDificultad": "Media"
     },
     { "id": 17,
       "nombre": "serpiente acuática",
-      "dificultad": "facil"
+      "TipoDificultad": "Facil"
     },
     { "id": 18,
       "nombre": "demonio menor",
-      "dificultad": "dificil"
+      "TipoDificultad": "Dificil"
     },
     { "id": 19,
       "nombre": "caballero espectral",
-      "dificultad": "dificil"
+      "TipoDificultad": "Dificil"
     },
     { "id": 20,
       "nombre": "ángel caído",
-      "dificultad": "dificil"
+      "TipoDificultad": "Dificil"
     }
   ]
 }

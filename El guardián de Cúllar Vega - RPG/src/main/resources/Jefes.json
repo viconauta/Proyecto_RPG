@@ -1,49 +1,34 @@
 {
   "jefes": [
     {
-      "id_enemigo": 5,
-      "tipo": "Rey Cavernícola",
-      "dificultad": "extrema",
-      "habilidadEspecial": {
-        "nombre": "Terremoto Devastador",
-        "descripcion": "Golpea el suelo aturdiendo a todos los jugadores cercanos."
-      }
-    },
-    {
-      "id_enemigo": 10,
-      "tipo": "Reina Arácnida",
+      "id": 21,
+      "nombre": "rey cavernícola",
       "dificultad": "dificil",
-      "habilidadEspecial": {
-        "nombre": "Telaraña Paralizante",
-        "descripcion": "Inmoviliza al objetivo durante 3 turnos."
-      }
+      "habilidadEspecial": "ataqueExtra"
     },
     {
-      "id_enemigo": 15,
-      "tipo": "Lich Supremo",
-      "dificultad": "extrema",
-      "habilidadEspecial": {
-        "nombre": "Invocar Horda",
-        "descripcion": "Revive a 3 no-muertos caídos para que luchen a su lado."
-      }
+      "id": 22,
+      "nombre": "reina arácnida",
+      "dificultad": "media",
+      "habilidadEspecial": "defensaExtra"
     },
     {
-      "id_enemigo": 20,
-      "tipo": "Archimago Corrupto",
-      "dificultad": "extrema",
-      "habilidadEspecial": {
-        "nombre": "Tormenta de Meteoros",
-        "descripcion": "Inflige daño de fuego masivo en área."
-      }
-    },
-    {
-      "id_enemigo": 21,
-      "tipo": "Leviatán Abisal",
+      "id": 23,
+      "nombre": "lich supremo",
       "dificultad": "dificil",
-      "habilidadEspecial": {
-        "nombre": "Tsunami",
-        "descripcion": "Arrastra a los jugadores y reduce su velocidad de ataque."
-      }
+      "habilidadEspecial": "vidaExtra"
+    },
+    {
+      "id": 24,
+      "nombre": "archimago corrupto",
+      "dificultad": "dificil",
+      "habilidadEspecial": "ataqueExtra"
+    },
+    {
+      "id": 25,
+      "nombre": "leviatán abisal",
+      "dificultad": "dificil",
+      "habilidadEspecial": "defensaExtra"
     }
   ]
 }
