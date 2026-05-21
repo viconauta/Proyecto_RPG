@@ -2,24 +2,28 @@ package Clases;
 
 public class Sala {
     // Atributos
-    private String descripcion;
+    private int id_sala, recompensa;
+    private String descripcion, historia;
     private Enemigo enemigo;
     private boolean completada;
-    private int recompensa;
 
     //Constructor por defecto
-    public Sala() {
+    private Sala() {
         this.descripcion = "";
         this.completada = false;
         this.recompensa = 0;
+        this.id_sala = 0;
+        this.historia = "";
     }
 
     //Constructor por parametros
-    public Sala(String d, Enemigo e, int r) {
+    public Sala(String d, Enemigo e, int r, int id, String his) {
         this.descripcion = d;
         this.enemigo = e;
         this.completada = false;
         this.recompensa = r;
+        this.id_sala = id;
+        this.historia = his;
     }
 
     //Constructor de copia
@@ -28,6 +32,8 @@ public class Sala {
         this.enemigo = s.enemigo;
         this.completada = s.completada;
         this.recompensa = s.recompensa;
+        this.id_sala = s.id_sala;
+        this.historia = s.historia;
     }
 
     // Getters
@@ -47,21 +53,13 @@ public class Sala {
         return this.recompensa;
     }
 
+    public int getId_sala() { return this.id_sala; }
+
+    public String getHistoria() { return this.historia; }
+
     // Setters
-    public void setDescripcion(String d) {
-        this.descripcion = d;
-    }
-
-    public void setEnemigo(Enemigo e) {
-        this.enemigo = e;
-    }
-
     public void setCompletada(boolean c) {
         this.completada = c;
-    }
-
-    public void setRecompensa(int r) {
-        this.recompensa = r;
     }
 
     // Métodos
