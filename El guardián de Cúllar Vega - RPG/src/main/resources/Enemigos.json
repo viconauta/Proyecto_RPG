@@ -16,10 +16,6 @@
       "nombre": "espíritu",
       "TipoDificultad": "Media"
     },
-    { "id": 5,
-      "nombre": "gelatinoso",
-      "TipoDificultad": "Facil"
-    },
     { "id": 6,
       "nombre": "humanoide hostil",
       "TipoDificultad": "Media"
@@ -35,10 +31,6 @@
     { "id": 9,
       "nombre": "mago oscuro",
       "TipoDificultad": "Dificil"
-    },
-    { "id": 10,
-      "nombre": "roedor mutado",
-      "TipoDificultad": "Facil"
     },
     { "id": 11,
       "nombre": "gigante",
@@ -56,10 +48,6 @@
       "nombre": "zombi",
       "TipoDificultad": "Facil"
     },
-    { "id": 15,
-      "nombre": "asesino",
-      "TipoDificultad": "Dificil"
-    },
     { "id": 16,
       "nombre": "gárgola",
       "TipoDificultad": "Media"
@@ -69,14 +57,10 @@
       "TipoDificultad": "Facil"
     },
     { "id": 18,
-      "nombre": "demonio menor",
-      "TipoDificultad": "Dificil"
-    },
-    { "id": 19,
       "nombre": "caballero espectral",
       "TipoDificultad": "Dificil"
     },
-    { "id": 20,
+    { "id": 19,
       "nombre": "ángel caído",
       "TipoDificultad": "Dificil"
     }
