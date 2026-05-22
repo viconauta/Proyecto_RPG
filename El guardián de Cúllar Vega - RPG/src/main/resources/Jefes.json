@@ -19,13 +19,13 @@
       "habilidadEspecial": "VidaExtra"
     },
     {
-      "id": 20,
+      "id": 18,
       "nombre": "archimago corrupto",
       "TipoDificultad": "Dificil",
       "habilidadEspecial": "AtaqueExtra"
     },
     {
-      "id": 21,
+      "id": 20,
       "nombre": "leviatan abisal",
       "TipoDificultad": "Dificil",
       "habilidadEspecial": "DefensaExtra"

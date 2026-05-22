@@ -1,18 +1,18 @@
 package Clases;
 
-public class Jefe {
+public class Jefe extends Enemigo{
     //Atributos
     private Habilidad habilidadEspecial;
 
     public Jefe(){
         super();
-        this.habilidadEspecial = Habilidad.AtaqueExtra;
+        this.habilidadEspecial = null;
     }
 
     //Constructor por parametros
-    public Jefe(Habilidad habilidadEspecial, Enemigo enemigos){
-        super(enemigo);
-        this.habilidadEspecial = habilidadEspecial;
+    public Jefe(int id, TipoDificultad dificultad, String tipo, String nombre, Habilidad h){
+        super(id, dificultad, tipo, nombre);
+        this.habilidadEspecial = h;
     }
 
     //Constructor de copia

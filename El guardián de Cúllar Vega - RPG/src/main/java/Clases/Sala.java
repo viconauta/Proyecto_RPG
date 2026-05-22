@@ -4,7 +4,7 @@ public class Sala {
     // Atributos
     private int id_sala, recompensa;
     private String descripcion, historia;
-    private Enemigo enemigo;
+    private int enemigo;
     private boolean completada;
 
     //Constructor por defecto
@@ -14,10 +14,11 @@ public class Sala {
         this.recompensa = 0;
         this.id_sala = 0;
         this.historia = "";
+        this.enemigo = 0;
     }
 
     //Constructor por parametros
-    public Sala(String d, Enemigo e, int r, int id, String his) {
+    public Sala(String d, int e, int r, int id, String his) {
         this.descripcion = d;
         this.enemigo = e;
         this.completada = false;
@@ -41,7 +42,7 @@ public class Sala {
         return this.descripcion;
     }
 
-    public Enemigo getEnemigo() {
+    public int getEnemigo() {
         return this.enemigo;
     }
 
@@ -67,17 +68,19 @@ public class Sala {
 
     }
 
-    public String mostrarDescripcion() {
+    public void mostrarDescripcion() {
 
     }
 
     // Método toString
     @Override
     public String toString() {
-        return "Sala{" +
-                "descripcion='" + this.descripcion + '\'' +
-                ", enemigo=" + this.enemigo +
-                ", completada=" + this.completada +
-                ", recompensa=" + this.recompensa;
+        return "Sala {" +
+                "\nDescripcion: '" + this.descripcion +
+                "\nEnemigo: " + this.enemigo +
+                "\nCompletada: " + this.completada +
+                "\nRecompensa: " + this.recompensa +
+                "\nHistoria: " + this.historia +
+                "\n-------------------------------------";
     }
 }

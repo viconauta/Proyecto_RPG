@@ -1,10 +1,11 @@
 package main;
-
 import com.google.gson.Gson;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import Clases.*;
 
@@ -13,8 +14,13 @@ import Clases.*;
 public class Main {
     public static void main(String[] args)  {
         String ruta_salas = Ruta.RUTA_RESOURCES + Ruta.RUTA_SALAS;
+
         try{
             Historia h = new Historia(ruta_salas);
+            ArrayList<Sala> listaSalas = h.getSalas();
+            for(Sala s: listaSalas) {
+                System.out.println(s.toString());
+            }
         }catch(IOException e) {
             System.out.println("No se ha encontrado el archivo.");
         }

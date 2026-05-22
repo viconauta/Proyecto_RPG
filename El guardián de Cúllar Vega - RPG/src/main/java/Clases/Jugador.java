@@ -14,15 +14,15 @@ public class Jugador {
     }
 
     //parametros
-    public Jugador(Personaje p) {
-        super(p);
+    public Jugador(String nom) {
+        super();
         this.nivel = 0;
         this.exp = 0;
     }
 
     //copia
     public Jugador(Jugador j) {
-        super(j);
+        super();
         this.nivel = j.nivel;
         this.exp = j.exp;
     }

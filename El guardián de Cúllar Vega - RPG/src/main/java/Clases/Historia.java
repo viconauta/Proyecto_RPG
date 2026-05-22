@@ -9,12 +9,10 @@ import java.util.ArrayList;
 public class Historia  {
     // Atributos
     private ArrayList<Sala> salas;
-    private int id_sala;
 
     //Constructor por defecto
     private Historia(){
         this.salas = null;
-        this.id_sala = 0;
     }
 
     public Historia(String ruta) throws FileNotFoundException {
@@ -37,7 +35,6 @@ public class Historia  {
     //Constructor de copia
     public Historia(Historia historia) {
         this.salas = new ArrayList<>(historia.salas);
-        this.id_sala = historia.id_sala;
     }
 
     // Getters
@@ -45,15 +42,11 @@ public class Historia  {
         return this.salas;
     }
 
-    public int getId_sala() {
-        return this.id_sala;
-    }
 
     // Método toString
     @Override
     public String toString() {
-        String imprimir = "Sala actual:" + this.id_sala +
-                "Lista de Salas:\n";
+        String imprimir = "Lista de Salas:\n";
         for(Sala s: this.salas){
             imprimir += "-" + s;
         }

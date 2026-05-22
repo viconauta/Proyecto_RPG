@@ -2,35 +2,43 @@ package Clases;
 
 public class Enemigo extends Personaje {
     //Atributos
+    private int id;
     private TipoDificultad dificultad;
-    private String tipo;
+    private String nombre;
 
     public Enemigo(){
         super();
+        this.id = 0;
         this.dificultad = TipoDificultad.Facil;
-        this.tipo = "Sin tipo";
+        this.nombre = "Sin tipo";
     }
 
     //Constructor por parametros
-    public Enemigo(TipoDificultad dificultad, String tipo, String nombre){
+    public Enemigo(int id, TipoDificultad dificultad, String tipo, String nombre){
         super(nombre);
+        this.id = id;
         this.dificultad = dificultad;
-        this.tipo = tipo;
+        this.nombre = tipo;
     }
 
     //Constructor de copia
     public Enemigo(Enemigo enemigos){
+        this.id = enemigos.id;
         this.dificultad = enemigos.dificultad;
-        this.tipo = enemigos.tipo;
+        this.nombre = enemigos.nombre;
     }
 
     //Getters
+    public int getId() {
+        return this.id;
+    }
+
     public TipoDificultad getDificultad() {
         return this.dificultad;
     }
 
     public String getTipo() {
-        return this.tipo;
+        return this.nombre;
     }
 
     //Setters
@@ -39,17 +47,17 @@ public class Enemigo extends Personaje {
     }
 
     public void setTipo(String tipo) {
-        this.tipo = tipo;
+        this.nombre = tipo;
     }
 
     //Metodos
-    public int decidirAccion(){
+    public void decidirAccion(){
 
     }
 
     //ToString
     @Override
     public String toString() {
-        return "Enemigo: " + this.tipo + " (Dificultad: " + this.dificultad + ") " + super.toString();
+        return "Enemigo: " + this.nombre + " (Dificultad: " + this.dificultad + ") " + super.toString();
     }
 }

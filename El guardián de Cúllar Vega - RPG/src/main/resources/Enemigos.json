@@ -56,10 +56,6 @@
       "nombre": "serpiente acuática",
       "TipoDificultad": "Facil"
     },
-    { "id": 18,
-      "nombre": "caballero espectral",
-      "TipoDificultad": "Dificil"
-    },
     { "id": 19,
       "nombre": "ángel caído",
       "TipoDificultad": "Dificil"
