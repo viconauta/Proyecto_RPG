@@ -1,0 +1,34 @@
+{
+  "jefes": [
+    {
+      "id": 5,
+      "nombre": "rey cavernicola",
+      "TipoDificultad": "Dificil",
+      "habilidadEspecial": "AtaqueExtra"
+    },
+    {
+      "id": 10,
+      "nombre": "reina arscnida",
+      "TipoDificultad": "Media",
+      "habilidadEspecial": "DefensaExtra"
+    },
+    {
+      "id": 15,
+      "nombre": "lich supremo",
+      "TipoDificultad": "Dificil",
+      "habilidadEspecial": "VidaExtra"
+    },
+    {
+      "id": 20,
+      "nombre": "archimago corrupto",
+      "TipoDificultad": "Dificil",
+      "habilidadEspecial": "AtaqueExtra"
+    },
+    {
+      "id": 21,
+      "nombre": "leviatan abisal",
+      "TipoDificultad": "Dificil",
+      "habilidadEspecial": "DefensaExtra"
+    }
+  ]
+}

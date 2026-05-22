@@ -1,0 +1,68 @@
+{
+  "enemigos": [
+    { "id": 1,
+      "nombre": "criatura cavernícola",
+      "TipoDificultad": "Facil"
+    },
+    { "id": 2,
+      "nombre": "arácnido",
+      "TipoDificultad": "Facil"
+    },
+    { "id": 3,
+      "nombre": "no-muerto",
+      "TipoDificultad": "Media"
+    },
+    { "id": 4,
+      "nombre": "espíritu",
+      "TipoDificultad": "Media"
+    },
+    { "id": 6,
+      "nombre": "humanoide hostil",
+      "TipoDificultad": "Media"
+    },
+    { "id": 7,
+      "nombre": "cultista",
+      "TipoDificultad": "media"
+    },
+    { "id": 8,
+      "nombre": "bestia voladora",
+      "TipoDificultad": "Facil"
+    },
+    { "id": 9,
+      "nombre": "mago oscuro",
+      "TipoDificultad": "Dificil"
+    },
+    { "id": 11,
+      "nombre": "gigante",
+      "TipoDificultad": "Dificil"
+    },
+    { "id": 12,
+      "nombre": "elemental de fuego",
+      "TipoDificultad": "Dificil"
+    },
+    { "id": 13,
+      "nombre": "constructo helado",
+      "TipoDificultad": "Dificil"
+    },
+    { "id": 14,
+      "nombre": "zombi",
+      "TipoDificultad": "Facil"
+    },
+    { "id": 16,
+      "nombre": "gárgola",
+      "TipoDificultad": "Media"
+    },
+    { "id": 17,
+      "nombre": "serpiente acuática",
+      "TipoDificultad": "Facil"
+    },
+    { "id": 18,
+      "nombre": "caballero espectral",
+      "TipoDificultad": "Dificil"
+    },
+    { "id": 19,
+      "nombre": "ángel caído",
+      "TipoDificultad": "Dificil"
+    }
+  ]
+}
