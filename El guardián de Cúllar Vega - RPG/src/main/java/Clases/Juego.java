@@ -41,10 +41,6 @@ public class Juego {
 
     }
 
-    public void mover(char tecla) {
-
-    }
-
     public void entrarSala() {
 
     }

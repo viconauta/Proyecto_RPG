@@ -11,7 +11,7 @@ public class Historia  {
     private ArrayList<Sala> salas;
 
     //Constructor por defecto
-    private Historia(){
+    public Historia(){
         this.salas = null;
     }
 

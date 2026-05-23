@@ -1,6 +1,6 @@
 package Clases;
 
-public class Jugador {
+public class Jugador extends Personaje{
     //atributos
     private int nivel ;
     private int exp;
@@ -15,7 +15,7 @@ public class Jugador {
 
     //parametros
     public Jugador(String nom) {
-        super();
+        super(nom);
         this.nivel = 0;
         this.exp = 0;
     }
