@@ -38,6 +38,26 @@ public class Juego {
 
     //Metodos
     public void iniciar() {
+        System.out.println("¡Comienza la aventura!");
+
+        for (Sala sala : historia.getSalas()) {
+            if(!jugador.estaVivo()) {
+                System.out.println("Has sido derrotado. Fin del juego.");
+                return;
+            }
+            System.out.println("\nEntrando en la sala: ");
+            sala.iniciarSala(this.jugador);
+
+
+            if (sala.getCompletada()) {
+                System.out.println("Has superado la sala.");
+            }
+            else {
+                System.out.println("Has sido derrotado.");
+            }
+
+
+        }
 
     }
 

@@ -1,11 +1,21 @@
 package Clases;
+import com.google.gson.Gson;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class Enemigo extends Personaje {
     //Atributos
     private int id;
     private TipoDificultad dificultad;
     private String nombre;
-
+    private Enemigo buscarEnemigoPorId(int id, ArrayList<Enemigo> enemigos) {
+        for (Enemigo e : enemigos) {
+            if (e.getId() == id) {
+                return e;
+            }
+        }
+        return null;
+    }
     public Enemigo(){
         super();
         this.id = 0;
@@ -18,6 +28,16 @@ public class Enemigo extends Personaje {
         super(nombre);
         this.id = id;
         this.dificultad = dificultad;
+        switch(this.dificultad) {
+            case Facil -> {
+                this.setAtaque(this.getAtaque() - 15);
+                this.setVida(this.getVida() - 20);
+            }
+            case Dificil -> {
+                this.setAtaque(this.getAtaque() + 15);
+                this.setVida(this.getVida() + 20);
+            }
+        }
         this.nombre = tipo;
     }
 
@@ -50,10 +70,7 @@ public class Enemigo extends Personaje {
         this.nombre = tipo;
     }
 
-    //Metodos
-    public void decidirAccion(){
 
-    }
 
     //ToString
     @Override

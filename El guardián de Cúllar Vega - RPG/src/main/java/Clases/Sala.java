@@ -1,11 +1,14 @@
 package Clases;
 
+import java.util.ArrayList;
+
 public class Sala {
     // Atributos
     private int id_sala, recompensa;
     private String descripcion, historia;
     private int enemigo;
     private boolean completada;
+    private String nomEnemigo;
 
     //Constructor por defecto
     private Sala() {
@@ -18,13 +21,14 @@ public class Sala {
     }
 
     //Constructor por parametros
-    public Sala(String d, int e, int r, int id, String his) {
+    public Sala(String d, int e, int r, int id, String his, ArrayList<Enemigo> enemigos) {
         this.descripcion = d;
         this.enemigo = e;
         this.completada = false;
         this.recompensa = r;
         this.id_sala = id;
         this.historia = his;
+        this.nomEnemigo = buscarEnemigoPorId(e, enemigos);
     }
 
     //Constructor de copia
@@ -64,12 +68,13 @@ public class Sala {
     }
 
     // Métodos
-    public void iniciarSala() {
+    public boolean iniciarSala(Jugador j) {
+        String imprimir = "Te encuentras en " + this.descripcion +
+                "\n" + this.historia +
+                "\nEn esta sala te espera " + this.enemigo;
 
-    }
-
-    public void mostrarDescripcion() {
-
+        Combate com = new Combate(j, this.enemigo, this);
+        return com.iniciar();
     }
 
     // Método toString

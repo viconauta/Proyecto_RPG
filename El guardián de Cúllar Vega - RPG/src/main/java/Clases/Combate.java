@@ -1,17 +1,24 @@
 package Clases;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Combate {
     //atributos
     private Jugador jugador;
-    private Personaje enemigo;
-    private boolean turnoJugador;
+    private Enemigo enemigo;
+    private Sala salas;
+    private Queue<Personaje> turnos;
 
     //constructor
     //parametros
-    public Combate(Jugador j, Personaje enemigo) {
-        this.jugador = j;
+    public Combate(Jugador jugador, Enemigo enemigo, Sala s) {
+        this.jugador = jugador;
         this.enemigo = enemigo;
-        this.turnoJugador = true;
+        this.salas = s;
+        this.turnos = new LinkedList<>();
+        turnos.add(jugador);
+        turnos.add(enemigo);
     }
 
     //getters
@@ -23,8 +30,12 @@ public class Combate {
         return this.enemigo;
     }
 
-    public boolean getTurnoJugador() {
-        return this.turnoJugador;
+    public Sala getSala() {
+        return this.salas;
+    }
+
+    public Queue getTurnoJugador() {
+        return this.turnos;
     }
 
     //setters
@@ -32,29 +43,63 @@ public class Combate {
         this.jugador = j;
     }
 
-    public void setEnemigo(Personaje e) {
+    public void setEnemigo(Enemigo e) {
         this.enemigo = e;
     }
 
-    public void setTurnoJugador(boolean t) {
-        this.turnoJugador = t;
+    public void setSalas(Sala s) {
+        this.salas = s;
+    }
+
+    public void setTurnoJugador(Queue t) {
+        this.turnos = t;
     }
 
     //metodos
-    public void iniciar() {
+    public boolean iniciar() {
+        System.out.println("¡Comienza el combate!");
+        while (jugador.estaVivo() && enemigo.estaVivo()) {
+            Personaje actual = turnos.poll();
 
+            if (actual instanceof Jugador) {
+                turnoJugador();
+            } else {
+                turnoEnemigo();
+            }
+
+            turnos.add(actual);
+        }
+
+        if (jugador.estaVivo()) {
+            System.out.println("Has ganado.");
+            jugador.ganarExp(this.salas.getRecompensa());
+            salas.setCompletada(true);
+            return true;
+        } else {
+            System.out.println("Has sido derrotado.");
+            return false;
+        }
     }
 
-    public void turnoJugador() {
+    private void turnoJugador() {
+        System.out.println("\nTu turno:");
+        System.out.println("1. Atacar");
+        System.out.println("2. Defender");
+        int opcion = Utiles.menu(1, 2);
 
+        switch (opcion) {
+            case 1 -> jugador.atacar(enemigo);
+            case 2 -> jugador.defender();
+            default -> System.out.println("Opción inválida, pierdes el turno.");
+        }
     }
 
-    public void turnoEnemigo() {
-
-    }
-
-    public void calcularDaño() {
-
+    private void turnoEnemigo() {
+        int num = Utiles.numerosAleatorios(1, 2);
+        switch(num) {
+            case 1 -> enemigo.atacar(jugador);
+            case 2 -> enemigo.defender();
+        }
     }
 
     //to string
@@ -62,6 +107,6 @@ public class Combate {
     public String toString() {
         return "Jugador: " + this.jugador +
                 "\n Enemigo: " + this.enemigo +
-                "\n Turno Jugador: " + this.turnoJugador;
+                "\n Turno Jugador: " + this.turnos;
     }
 }

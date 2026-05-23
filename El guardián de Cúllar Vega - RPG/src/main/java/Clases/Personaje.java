@@ -5,22 +5,20 @@ public class Personaje {
     private String nombre;
     private int vida = 100;
     private int ataque;
-    private int defensa;
     private boolean defendiendo = false;
+    private boolean defensaExtra = false;
 
     //constructores
     //defecto
     public Personaje() {
         this.nombre = "Sin nombre";
         this.ataque = Utiles.numerosAleatorios(20, 50);
-        this.defensa = Utiles.numerosAleatorios(5, 30);
     }
 
     //parametros
     public Personaje(String n) {
         this.nombre = n;
         this.ataque = Utiles.numerosAleatorios(20, 50);
-        this.defensa = Utiles.numerosAleatorios(5, 30);
     }
 
     //copia
@@ -28,8 +26,8 @@ public class Personaje {
         this.nombre = p.nombre;
         this.vida = p.vida;
         this.ataque = p.ataque;
-        this.defensa = p.defensa;
         this.defendiendo = p.defendiendo;
+        this.defensaExtra = p.defensaExtra;
     }
 
     //getters
@@ -45,12 +43,12 @@ public class Personaje {
         return this.ataque;
     }
 
-    public int getDefensa() {
-        return this.defensa;
-    }
-
     public boolean getDefendiendo() {
         return this.defendiendo;
+    }
+
+    public boolean getDefensaExtra() {
+        return this.defensaExtra;
     }
 
     //setters
@@ -62,17 +60,36 @@ public class Personaje {
         this.defendiendo = d;
     }
 
-    //metodos
-    public void atacar(Personaje enemigo) {
+    public void setVida(int vida) { this.vida = vida; }
 
+    public void setAtaque(int ataque) { this.ataque = ataque; }
+
+    public void setDefensaExtra(boolean def) {
+        this.defensaExtra = def;
+    }
+
+    //metodos
+    public void atacar(Personaje p) {
+        int daño = this.ataque;
+        p.recibirDaño(daño);
     }
 
     public void defender() {
-
+        this.defendiendo = true;
     }
 
     public void recibirDaño(int daño) {
-
+        if(this.getDefensaExtra()) {
+            daño /= 3;
+            this.vida -= daño;
+            if (this.vida < 0) this.vida = 0;
+        }
+        else if (defendiendo && !this.getDefensaExtra()) {
+            daño /= 2;
+            defendiendo = false;
+        }
+        this.vida -= daño;
+        if (this.vida < 0) this.vida = 0;
     }
 
     public boolean estaVivo() {
@@ -85,7 +102,6 @@ public class Personaje {
         return "Nombre: " + this.nombre +
                 "\n Vida: " + this.vida +
                 "\n Ataque: " + this.ataque +
-                "\n Defensa: " + this.defensa +
                 "\n Defenddiendo: " + this.defendiendo;
     }
 }

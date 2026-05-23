@@ -42,9 +42,20 @@ public class Jugador extends Personaje{
     }
 
     //metodos
-    public void subirNivel() {
-
+    public void ganarExp(int cantidad) {
+        this.exp += cantidad;
+        while (this.exp >= 100) {
+            this.exp -= 100;
+            subirNivel();
+        }
     }
+
+    public void subirNivel() {
+        this.nivel++;
+        this.setVida(this.getVida() + 10);
+        this.setAtaque(this.getAtaque() + 10);
+    }
+
 
     //to string
     @Override

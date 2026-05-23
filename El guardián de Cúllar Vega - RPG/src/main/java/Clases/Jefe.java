@@ -13,6 +13,11 @@ public class Jefe extends Enemigo{
     public Jefe(int id, TipoDificultad dificultad, String tipo, String nombre, Habilidad h){
         super(id, dificultad, tipo, nombre);
         this.habilidadEspecial = h;
+        switch(this.habilidadEspecial) {
+            case VidaExtra -> this.setVida(this.getVida() + 30);
+            case DefensaExtra -> this.setDefensaExtra(true);
+            case AtaqueExtra -> this.setAtaque(this.getAtaque() + 30);
+        }
     }
 
     //Constructor de copia
@@ -28,11 +33,6 @@ public class Jefe extends Enemigo{
     //Setters
     public void setHabilidadEspecial(Habilidad habilidadEspecial) {
         this.habilidadEspecial = habilidadEspecial;
-    }
-
-    //Metodos
-    public void usarHabilidadEspecial(){
-
     }
 
     //ToString
