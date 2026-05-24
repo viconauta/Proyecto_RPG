@@ -6,9 +6,9 @@ public class Sala {
     // Atributos
     private int id_sala, recompensa;
     private String descripcion, historia;
-    private int enemigo;
+    private int id_enemigo;
     private boolean completada;
-    private String nomEnemigo;
+    private Enemigo enemigo;
 
     //Constructor por defecto
     private Sala() {
@@ -17,28 +17,29 @@ public class Sala {
         this.recompensa = 0;
         this.id_sala = 0;
         this.historia = "";
-        this.enemigo = 0;
+        this.id_enemigo = 0;
+        this.enemigo = null;
     }
 
     //Constructor por parametros
-    public Sala(String d, int e, int r, int id, String his, ArrayList<Enemigo> enemigos) {
+    public Sala(String d, int e, int r, int id, String his) {
         this.descripcion = d;
-        this.enemigo = e;
+        this.id_enemigo = e;
         this.completada = false;
         this.recompensa = r;
         this.id_sala = id;
         this.historia = his;
-        this.nomEnemigo = buscarEnemigoPorId(e, enemigos);
     }
 
     //Constructor de copia
     public Sala(Sala s) {
         this.descripcion = s.descripcion;
-        this.enemigo = s.enemigo;
+        this.id_enemigo = s.id_enemigo;
         this.completada = s.completada;
         this.recompensa = s.recompensa;
         this.id_sala = s.id_sala;
         this.historia = s.historia;
+        this.enemigo = s.enemigo;
     }
 
     // Getters
@@ -46,8 +47,8 @@ public class Sala {
         return this.descripcion;
     }
 
-    public int getEnemigo() {
-        return this.enemigo;
+    public int getIdEnemigo() {
+        return this.id_enemigo;
     }
 
     public boolean getCompletada() {
@@ -62,9 +63,17 @@ public class Sala {
 
     public String getHistoria() { return this.historia; }
 
+    public Enemigo getEnemigo() {
+        return this.enemigo;
+    }
+
     // Setters
     public void setCompletada(boolean c) {
         this.completada = c;
+    }
+
+    public void setEnemigo(Enemigo e) {
+        this.enemigo = e;
     }
 
     // Métodos

@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Historia  {
     // Atributos
     private ArrayList<Sala> salas;
+    private ArrayList<Enemigo> enemigos;
 
     //Constructor por defecto
     public Historia(){
@@ -25,10 +26,19 @@ public class Historia  {
             fr.close();
 
             this.salas = historiaTemporal.salas;
-        }catch(FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             System.out.println("No se encontro el archivo.");
-        }catch(IOException e) {
+        } catch (IOException e) {
             System.out.println("Archivo no encontrado");
+        }
+
+        for (Sala s : this.salas) {
+            for (Enemigo e : this.enemigos) {
+                if (e.getId() == s.getIdEnemigo()) {
+                    s.setEnemigo(e);
+                    break;
+                }
+            }
         }
     }
 
@@ -42,8 +52,11 @@ public class Historia  {
         return this.salas;
     }
 
+    public ArrayList<Enemigo> getEnemigos() {
+        return this.enemigos;
+    }
 
-    // Método toString
+    //toString
     @Override
     public String toString() {
         String imprimir = "Lista de Salas:\n";

@@ -55,18 +55,7 @@ public class Juego {
             else {
                 System.out.println("Has sido derrotado.");
             }
-
-
         }
-
-    }
-
-    public void entrarSala() {
-
-    }
-
-    public void comprabarFin() {
-
     }
 
     //ToString
