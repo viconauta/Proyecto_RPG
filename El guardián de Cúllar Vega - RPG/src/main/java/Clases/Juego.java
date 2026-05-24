@@ -50,10 +50,8 @@ public class Juego {
 
 
             if (sala.getCompletada()) {
+                this.jugador.setVida(100 + (this.jugador.getNivel() * 10));
                 System.out.println("Has superado la sala.");
-            }
-            else {
-                System.out.println("Has sido derrotado.");
             }
         }
     }

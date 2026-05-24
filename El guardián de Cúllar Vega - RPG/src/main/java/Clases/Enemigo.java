@@ -5,21 +5,19 @@ import java.util.ArrayList;
 //
 public class Enemigo extends Personaje {
     //Atributos
-    private int id;
+    private int id_enemigo;
     private TipoDificultad dificultad;
-    private String nombre;
 
     public Enemigo(){
         super();
-        this.id = 0;
+        this.id_enemigo = 0;
         this.dificultad = TipoDificultad.Facil;
-        this.nombre = "Sin tipo";
     }
 
     //Constructor por parametros
-    public Enemigo(int id, TipoDificultad dificultad, String tipo, String nombre){
+    public Enemigo(int id, TipoDificultad dificultad, String nombre){
         super(nombre);
-        this.id = id;
+        this.id_enemigo = id;
         this.dificultad = dificultad;
         switch(this.dificultad) {
             case Facil -> {
@@ -31,43 +29,32 @@ public class Enemigo extends Personaje {
                 this.setVida(this.getVida() + 20);
             }
         }
-        this.nombre = tipo;
     }
 
     //Constructor de copia
     public Enemigo(Enemigo enemigos){
-        this.id = enemigos.id;
+        this.id_enemigo = enemigos.id_enemigo;
         this.dificultad = enemigos.dificultad;
-        this.nombre = enemigos.nombre;
     }
 
     //Getters
     public int getId() {
-        return this.id;
+        return this.id_enemigo;
     }
 
     public TipoDificultad getDificultad() {
         return this.dificultad;
     }
 
-    public String getTipo() {
-        return this.nombre;
-    }
 
     //Setters
     public void setDificultad(TipoDificultad dificultad) {
         this.dificultad = dificultad;
     }
 
-    public void setTipo(String tipo) {
-        this.nombre = tipo;
-    }
-
-
-
     //ToString
     @Override
     public String toString() {
-        return "Enemigo: " + this.nombre + " (Dificultad: " + this.dificultad + ") " + super.toString();
+        return "Id enemigo: " + this.id_enemigo + " (Dificultad: " + this.dificultad + ") " + super.toString();
     }
 }

@@ -70,25 +70,27 @@ public class Personaje {
 
     //metodos
     public void atacar(Personaje p) {
-        int daño = this.ataque;
-        p.recibirDaño(daño);
+        int danio = this.ataque;
+        p.recibirDanio(danio);
     }
 
     public void defender() {
         this.defendiendo = true;
     }
 
-    public void recibirDaño(int daño) {
-        if(this.getDefensaExtra()) {
-            daño /= 3;
-            this.vida -= daño;
-            if (this.vida < 0) this.vida = 0;
-        }
-        else if (defendiendo && !this.getDefensaExtra()) {
-            daño /= 2;
+    // CORREGIDO: Se evita la doble resta de daño
+    public void recibirDanio(int danio) {
+        if (this.getDefensaExtra()) {
+            danio /= 3;
+            this.vida -= danio;
+        } else if (defendiendo && !this.getDefensaExtra()) {
+            danio /= 2;
+            this.vida -= danio;
             defendiendo = false;
+        } else {
+            this.vida -= danio;
         }
-        this.vida -= daño;
+
         if (this.vida < 0) this.vida = 0;
     }
 
@@ -102,6 +104,6 @@ public class Personaje {
         return "Nombre: " + this.nombre +
                 "\n Vida: " + this.vida +
                 "\n Ataque: " + this.ataque +
-                "\n Defenddiendo: " + this.defendiendo;
+                "\n Defendiendo: " + this.defendiendo;
     }
 }

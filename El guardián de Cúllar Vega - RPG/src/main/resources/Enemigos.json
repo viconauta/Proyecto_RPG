@@ -1,64 +1,64 @@
 {
   "enemigos": [
-    { "id": 1,
+    { "id_enemigo": 1,
       "nombre": "criatura cavernícola",
-      "TipoDificultad": "Facil"
+      "dificultad": "Facil"
     },
-    { "id": 2,
+    { "id_enemigo": 2,
       "nombre": "arácnido",
-      "TipoDificultad": "Facil"
+      "dificultad": "Facil"
     },
-    { "id": 3,
+    { "id_enemigo": 3,
       "nombre": "no-muerto",
-      "TipoDificultad": "Normal"
+      "dificultad": "Normal"
     },
-    { "id": 4,
+    { "id_enemigo": 4,
       "nombre": "espíritu",
-      "TipoDificultad": "Normal"
+      "dificultad": "Normal"
     },
-    { "id": 6,
+    { "id_enemigo": 6,
       "nombre": "humanoide hostil",
-      "TipoDificultad": "Normal"
+      "dificultad": "Normal"
     },
-    { "id": 7,
+    { "id_enemigo": 7,
       "nombre": "cultista",
-      "TipoDificultad": "Normal"
+      "dificultad": "Normal"
     },
-    { "id": 8,
+    { "id_enemigo": 8,
       "nombre": "bestia voladora",
-      "TipoDificultad": "Facil"
+      "dificultad": "Facil"
     },
-    { "id": 9,
+    { "id_enemigo": 9,
       "nombre": "mago oscuro",
-      "TipoDificultad": "Dificil"
+      "dificultad": "Dificil"
     },
-    { "id": 11,
+    { "id_enemigo": 11,
       "nombre": "gigante",
-      "TipoDificultad": "Dificil"
+      "dificultad": "Dificil"
     },
-    { "id": 12,
+    { "id_enemigo": 12,
       "nombre": "elemental de fuego",
-      "TipoDificultad": "Dificil"
+      "dificultad": "Dificil"
     },
-    { "id": 13,
+    { "id_enemigo": 13,
       "nombre": "constructo helado",
-      "TipoDificultad": "Dificil"
+      "dificultad": "Dificil"
     },
-    { "id": 14,
+    { "id_enemigo": 14,
       "nombre": "zombi",
-      "TipoDificultad": "Facil"
+      "dificultad": "Facil"
     },
-    { "id": 16,
+    { "id_enemigo": 16,
       "nombre": "gárgola",
-      "TipoDificultad": "Normal"
+      "dificultad": "Normal"
     },
-    { "id": 17,
+    { "id_enemigo": 17,
       "nombre": "serpiente acuática",
-      "TipoDificultad": "Facil"
+      "dificultad": "Facil"
     },
-    { "id": 19,
+    { "id_enemigo": 19,
       "nombre": "ángel caído",
-      "TipoDificultad": "Dificil"
+      "dificultad": "Dificil"
     }
   ]
 }

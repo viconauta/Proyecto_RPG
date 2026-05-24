@@ -1,27 +1,16 @@
 package Clases;
 
-import java.util.ArrayList;
-
 public class Sala {
     // Atributos
-    private int id_sala, recompensa;
-    private String descripcion, historia;
+    private int id_sala;
+    private int recompensa;
+    private String descripcion;
+    private String historia;
     private int id_enemigo;
     private boolean completada;
-    private Enemigo enemigo;
+    private transient Enemigo enemigo;
 
-    //Constructor por defecto
-    private Sala() {
-        this.descripcion = "";
-        this.completada = false;
-        this.recompensa = 0;
-        this.id_sala = 0;
-        this.historia = "";
-        this.id_enemigo = 0;
-        this.enemigo = null;
-    }
-
-    //Constructor por parametros
+    //Constructor por parametros (el único que se usa)
     public Sala(String d, int e, int r, int id, String his) {
         this.descripcion = d;
         this.id_enemigo = e;
@@ -29,6 +18,7 @@ public class Sala {
         this.recompensa = r;
         this.id_sala = id;
         this.historia = his;
+        this.enemigo = null;
     }
 
     //Constructor de copia
@@ -43,12 +33,12 @@ public class Sala {
     }
 
     // Getters
-    public String getDescripcion() {
-        return this.descripcion;
-    }
-
     public int getIdEnemigo() {
         return this.id_enemigo;
+    }
+
+    public int getId_sala() {
+        return this.id_sala;
     }
 
     public boolean getCompletada() {
@@ -58,10 +48,6 @@ public class Sala {
     public int getRecompensa() {
         return this.recompensa;
     }
-
-    public int getId_sala() { return this.id_sala; }
-
-    public String getHistoria() { return this.historia; }
 
     public Enemigo getEnemigo() {
         return this.enemigo;
@@ -80,7 +66,13 @@ public class Sala {
     public boolean iniciarSala(Jugador j) {
         String imprimir = "Te encuentras en " + this.descripcion +
                 "\n" + this.historia +
-                "\nEn esta sala te espera " + this.enemigo;
+                "\nEn esta sala te espera " + (this.enemigo != null ? this.enemigo.getNombre() : "desconocido");
+        System.out.println(imprimir);
+
+        if (this.enemigo == null) {
+            System.out.println("Error: No hay enemigo asignado a esta sala.");
+            return false;
+        }
 
         Combate com = new Combate(j, this.enemigo, this);
         return com.iniciar();
@@ -91,7 +83,7 @@ public class Sala {
     public String toString() {
         return "Sala {" +
                 "\nDescripcion: '" + this.descripcion +
-                "\nEnemigo: " + this.enemigo +
+                "\nEnemigo: " + (this.enemigo != null ? this.enemigo.getNombre() : "Sin asignar") +
                 "\nCompletada: " + this.completada +
                 "\nRecompensa: " + this.recompensa +
                 "\nHistoria: " + this.historia +

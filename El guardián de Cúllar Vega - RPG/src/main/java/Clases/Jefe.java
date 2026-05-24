@@ -3,7 +3,6 @@ package Clases;
 public class Jefe extends Enemigo{
     //Atributos
     private Habilidad habilidadEspecial;
-    private ArrayList<Jefe> jefes;
 
     public Jefe() {
         super();
@@ -11,8 +10,8 @@ public class Jefe extends Enemigo{
     }
 
     //Constructor por parametros
-    public Jefe(int id, TipoDificultad dificultad, String tipo, String nombre){
-        super(id, dificultad, tipo, nombre);
+    public Jefe(int id, TipoDificultad dificultad, String tipo, String nombre, Habilidad h){
+        super(id, dificultad, nombre);
         this.habilidadEspecial = h;
         switch(this.habilidadEspecial) {
             case VidaExtra -> this.setVida(this.getVida() + 30);
@@ -23,6 +22,7 @@ public class Jefe extends Enemigo{
 
     //Constructor de copia
     public Jefe(Jefe jefe){
+        super(jefe);
         this.habilidadEspecial = jefe.habilidadEspecial;
     }
 
@@ -39,6 +39,6 @@ public class Jefe extends Enemigo{
     //ToString
     @Override
     public String toString() {
-        return "Jefes{" + "habilidadEspecial=" + this.habilidadEspecial + '}';
+        return "Jefe{ " + super.toString() + ", habilidadEspecial=" + this.habilidadEspecial + " }";
     }
 }

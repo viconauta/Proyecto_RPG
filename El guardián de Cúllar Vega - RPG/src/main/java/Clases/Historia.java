@@ -1,6 +1,7 @@
 package Clases;
 import com.google.gson.Gson;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -13,7 +14,8 @@ public class Historia  {
 
     //Constructor por defecto
     public Historia(){
-        this.salas = null;
+        this.salas = new ArrayList<>();
+        this.enemigos = new ArrayList<>();
     }
 
     public Historia(String rutaH, String rutaJ, String rutaE) throws FileNotFoundException {
@@ -48,12 +50,14 @@ public class Historia  {
 
         for (Sala s : this.salas) {
             for (Enemigo e : this.enemigos) {
-                if (e.getId() == s.getIdEnemigo()) {
+                if (e.getId() == s.getId_sala()) {
                     s.setEnemigo(e);
                     break;
                 }
             }
         }
+
+
     }
 
     //Constructor de copia

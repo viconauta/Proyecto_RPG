@@ -67,7 +67,7 @@
 	{
 		"id_sala": 9,
 		"descripcion": "Una cámara con símbolos arcanos.",
-		"enemigo": 9,
+		"id_enemigo": 9,
 		"completada": false,
 		"recompensa": 100,
 		"historia": "Los símbolos arcanos brillan débilmente en las paredes. Una energía invisible recorre la cámara, erizando tu piel mientras avanzas con cautela."
@@ -75,7 +75,7 @@
 	{
 		"id_sala": 10,
 		"descripcion": "Un almacén abandonado.",
-		"enemigo": 10,
+		"id_enemigo": 10,
 		"completada": false,
 		"recompensa": 25,
 		"historia": "El almacén abandonado está lleno de cajas rotas y herramientas oxidadas. Algo se mueve entre los escombros, demasiado rápido para que puedas verlo con claridad."
@@ -83,7 +83,7 @@
 	{
 		"id_sala": 11,
 		"descripcion": "Una sala con un foso en el centro.",
-		"enemigo": 11,
+		"id_enemigo": 11,
 		"completada": false,
 		"recompensa": 120,
 		"historia": "Un foso profundo ocupa el centro de la sala. El eco de gotas cayendo en la oscuridad te recuerda que un paso en falso podría ser el último."
@@ -91,7 +91,7 @@
 	{
 		"id_sala": 12,
 		"descripcion": "Un corredor lleno de humo.",
-		"enemigo": 12,
+		"id_enemigo": 12,
 		"completada": false,
 		"recompensa": 90,
 		"historia": "El humo espeso dificulta la respiración. Sombras borrosas se mueven entre la neblina, y cada una parece acercarse más de lo que te gustaría."
@@ -99,7 +99,7 @@
 	{
 		"id_sala": 13,
 		"descripcion": "Una cámara helada.",
-		"enemigo": 13,
+		"id_enemigo": 13,
 		"completada": false,
 		"recompensa": 110,
 		"historia": "El frío muerde tu piel. La cámara helada parece absorber el calor de tu cuerpo, y tus pasos dejan huellas que desaparecen demasiado rápido."
@@ -107,7 +107,7 @@
 	{
 		"id_sala": 14,
 		"descripcion": "Una sala silenciosa con olor a moho.",
-		"enemigo": 14,
+		"id_enemigo": 14,
 		"completada": false,
 		"recompensa": 45,
 		"historia": "El silencio es tan profundo que casi duele. El olor a moho impregna el aire, y cada rincón parece ocultar secretos que preferirías no descubrir."
@@ -115,7 +115,7 @@
 	{
 		"id_sala": 15,
 		"descripcion": "Un cuarto con trampas visibles en el suelo.",
-		"enemigo": 15,
+		"id_enemigo": 15,
 		"completada": false,
 		"recompensa": 95,
 		"historia": "Las trampas en el suelo son visibles, pero eso no te tranquiliza. Si estas están a la vista, ¿cuántas más estarán ocultas esperando tu próximo paso?"
@@ -123,7 +123,7 @@
 	{
 		"id_sala": 16,
 		"descripcion": "Una sala con pilares derrumbados.",
-		"enemigo": 16,
+		"id_enemigo": 16,
 		"completada": false,
 		"recompensa": 85,
 		"historia": "Los pilares derrumbados forman un laberinto improvisado. Entre las rocas, escuchas un leve susurro, como si alguien te observara desde la penumbra."
@@ -131,7 +131,7 @@
 	{
 		"id_sala": 17,
 		"descripcion": "Un túnel inundado hasta los tobillos.",
-		"enemigo": 17,
+		"id_enemigo": 17,
 		"completada": false,
 		"recompensa": 50,
 		"historia": "El agua fría te cubre los tobillos. Cada movimiento provoca ondas que se pierden en la oscuridad, pero una de ellas… parece volver hacia ti."
@@ -139,7 +139,7 @@
 	{
 		"id_sala": 18,
 		"descripcion": "Una cámara con un fuerte olor a azufre.",
-		"enemigo": 18,
+		"id_enemigo": 18,
 		"completada": false,
 		"recompensa": 130,
 		"historia": "El olor a azufre es tan intenso que te obliga a cubrirte la boca. Algo ha pasado aquí, algo que dejó marcas en las paredes y un silencio antinatural."
@@ -147,7 +147,7 @@
 	{
 		"id_sala": 19,
 		"descripcion": "Una sala con restos de una batalla antigua.",
-		"enemigo": 19,
+		"id_enemigo": 19,
 		"completada": false,
 		"recompensa": 140,
 		"historia": "Restos de una batalla antigua cubren el suelo. Armas rotas, escudos abollados y manchas oscuras cuentan una historia que nadie sobrevivió para narrar."
@@ -155,7 +155,7 @@
 	{
 		"id_sala": 20,
 		"descripcion": "Un santuario olvidado.",
-		"enemigo": 20,
+		"id_enemigo": 20,
 		"completada": false,
 		"recompensa": 200,
 		"historia": "El santuario olvidado está envuelto en una calma inquietante. Una luz tenue cae desde lo alto, iluminando un pedestal vacío que parece esperar tu llegada."

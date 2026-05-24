@@ -19,11 +19,22 @@ public class Main {
         String nom = "";
         Historia h = new Historia();
         String ruta_salas = Ruta.RUTA_RESOURCES + Ruta.RUTA_SALAS;
+        String ruta_enemig = Ruta.RUTA_RESOURCES + Ruta.RUTA_ENEMIGO;
+        String ruta_jefes = Ruta.RUTA_RESOURCES + Ruta.RUTA_JEFES;
 
         //creamos el array list de salas en hsitoria y lo guardamos
         try{
-            h = new Historia(ruta_salas);
+            h = new Historia(ruta_salas, ruta_jefes, ruta_enemig);
             ArrayList<Sala> listaSalas = h.getSalas();
+            ArrayList<Enemigo> listaEnemigos = h.getEnemigos();
+/*
+            for(Sala s: listaSalas) {
+                System.out.println(s);
+            }
+            for(Enemigo e: listaEnemigos) {
+                System.out.println(e);
+            }
+*/
         }catch(IOException e) {
             System.out.println("No se ha encontrado el archivo.");
         }
