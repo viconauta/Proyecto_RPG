@@ -2,7 +2,7 @@ package Clases;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.ArrayList;
-
+//
 public class Enemigo extends Personaje {
     //Atributos
     private int id;
