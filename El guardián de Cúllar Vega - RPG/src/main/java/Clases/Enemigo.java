@@ -8,14 +8,7 @@ public class Enemigo extends Personaje {
     private int id;
     private TipoDificultad dificultad;
     private String nombre;
-    private Enemigo buscarEnemigoPorId(int id, ArrayList<Enemigo> enemigos) {
-        for (Enemigo e : enemigos) {
-            if (e.getId() == id) {
-                return e;
-            }
-        }
-        return null;
-    }
+
     public Enemigo(){
         super();
         this.id = 0;

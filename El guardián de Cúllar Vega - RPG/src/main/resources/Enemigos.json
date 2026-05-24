@@ -10,19 +10,19 @@
     },
     { "id": 3,
       "nombre": "no-muerto",
-      "TipoDificultad": "Media"
+      "TipoDificultad": "Normal"
     },
     { "id": 4,
       "nombre": "espíritu",
-      "TipoDificultad": "Media"
+      "TipoDificultad": "Normal"
     },
     { "id": 6,
       "nombre": "humanoide hostil",
-      "TipoDificultad": "Media"
+      "TipoDificultad": "Normal"
     },
     { "id": 7,
       "nombre": "cultista",
-      "TipoDificultad": "media"
+      "TipoDificultad": "Normal"
     },
     { "id": 8,
       "nombre": "bestia voladora",
@@ -50,7 +50,7 @@
     },
     { "id": 16,
       "nombre": "gárgola",
-      "TipoDificultad": "Media"
+      "TipoDificultad": "Normal"
     },
     { "id": 17,
       "nombre": "serpiente acuática",

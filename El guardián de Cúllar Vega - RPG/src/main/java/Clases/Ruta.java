@@ -6,5 +6,7 @@ public class Ruta {
 
     public static final String RUTA_RESOURCES = "./src/main/resources/";
     public static final String RUTA_SALAS ="Salas.json";
+    public static final String RUTA_ENEMIGOS="Enemigos.json";
+    public static final String RUTA_JEFES="Jefes.json";
 
 }

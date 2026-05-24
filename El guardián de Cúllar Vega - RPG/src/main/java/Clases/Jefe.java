@@ -3,14 +3,15 @@ package Clases;
 public class Jefe extends Enemigo{
     //Atributos
     private Habilidad habilidadEspecial;
+    private ArrayList<Jefe> jefes;
 
-    public Jefe(){
+    public Jefe() {
         super();
         this.habilidadEspecial = null;
     }
 
     //Constructor por parametros
-    public Jefe(int id, TipoDificultad dificultad, String tipo, String nombre, Habilidad h){
+    public Jefe(int id, TipoDificultad dificultad, String tipo, String nombre){
         super(id, dificultad, tipo, nombre);
         this.habilidadEspecial = h;
         switch(this.habilidadEspecial) {
