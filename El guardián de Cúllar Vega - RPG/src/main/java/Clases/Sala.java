@@ -62,11 +62,13 @@ public class Sala {
         this.enemigo = e;
     }
 
-    // Métodos
+    // Métodosdf
     public boolean iniciarSala(Jugador j) {
-        String imprimir = "Te encuentras en " + this.descripcion +
-                "\n" + this.historia +
-                "\nEn esta sala te espera " + (this.enemigo != null ? this.enemigo.getNombre() : "desconocido");
+        String imprimir = "-------------------------------------------------------------------------------------------------------\n";
+        imprimir += "| Te encuentras en " + this.descripcion +
+                "\n---" +
+                "\n| " + this.historia;
+        imprimir += "\n-------------------------------------------------------------------------------------------------------\n";
         System.out.println(imprimir);
 
         if (this.enemigo == null) {
@@ -83,7 +85,7 @@ public class Sala {
     public String toString() {
         return "Sala {" +
                 "\nDescripcion: '" + this.descripcion +
-                "\nEnemigo: " + (this.enemigo != null ? this.enemigo.getNombre() : "Sin asignar") +
+                "\nEnemigo: " + this.enemigo.getNombre() +
                 "\nCompletada: " + this.completada +
                 "\nRecompensa: " + this.recompensa +
                 "\nHistoria: " + this.historia +

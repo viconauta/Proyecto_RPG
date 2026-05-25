@@ -22,9 +22,9 @@ public class Combate {
 
     //metodos
     public boolean iniciar() {
-        System.out.println("¡Comienza el combate!");
+        System.out.println("\n¡Comienza el combate!");
         System.out.println("Te enfrentas a: " + enemigo.getNombre());
-        System.out.println("Tu vida: " + jugador.getVida() + " | Su vida: " + enemigo.getVida() + "\n");
+        System.out.println("Tu vida: " + jugador.getVida() + " | Su vida: " + enemigo.getVida() + "\nTu ataque: " + jugador.getAtaque());
 
         while (jugador.estaVivo() && enemigo.estaVivo()) {
             Personaje actual = turnos.poll();
@@ -34,8 +34,8 @@ public class Combate {
             } else {
                 turnoEnemigo();
             }
-
-            System.out.println("Tu vida: " + jugador.getVida() + " | Su vida: " + enemigo.getVida());
+            System.out.println("-----------------------------------------");
+            System.out.println("Tu vida: " + jugador.getVida() + " | Su vida: " + enemigo.getVida() + "\nTu ataque: " + jugador.getAtaque());
             turnos.add(actual);
         }
 
