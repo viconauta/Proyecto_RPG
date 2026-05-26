@@ -1,5 +1,6 @@
 package Clases;
 
+import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -52,10 +53,16 @@ public class Combate {
     }
 
     private void turnoJugador() {
+        int opcion = 0;
         System.out.println("\nTu turno:");
         System.out.println("1. Atacar");
         System.out.println("2. Defender");
-        int opcion = Utiles.menu(1, 2);
+        try{
+            opcion = Utiles.menu(1, 2);
+        }catch(InputMismatchException e) {
+            System.out.println("Formato de numero no valido.");
+        }
+
 
         switch (opcion) {
             case 1 -> {
