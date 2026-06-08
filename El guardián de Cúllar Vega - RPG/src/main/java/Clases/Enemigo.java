@@ -52,6 +52,10 @@ public class Enemigo extends Personaje {
         this.dificultad = dificultad;
     }
 
+    public String getRutaEnemigo() {
+        return Ruta.RUTA_RESOURCES + this.id_enemigo + ".png";
+    }
+
     //ToString
     @Override
     public String toString() {
