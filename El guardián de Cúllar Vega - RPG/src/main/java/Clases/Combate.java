@@ -20,7 +20,7 @@ public class Combate {
         turnos.add(jugador);
         turnos.add(enemigo);
     }
-
+    
     //metodos
     public boolean iniciar() {
         System.out.println("\n¡Comienza el combate!");
