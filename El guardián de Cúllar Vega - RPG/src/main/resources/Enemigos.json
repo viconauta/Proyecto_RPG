@@ -1,11 +1,11 @@
 {
   "enemigos": [
     { "id_enemigo": 1,
-      "nombre": "criatura cavernícola",
+      "nombre": "criatura cavernicola",
       "dificultad": "Facil"
     },
     { "id_enemigo": 2,
-      "nombre": "arácnido",
+      "nombre": "aracnido",
       "dificultad": "Facil"
     },
     { "id_enemigo": 3,
@@ -13,7 +13,7 @@
       "dificultad": "Normal"
     },
     { "id_enemigo": 4,
-      "nombre": "espíritu",
+      "nombre": "espiritu",
       "dificultad": "Normal"
     },
     { "id_enemigo": 6,
@@ -49,15 +49,15 @@
       "dificultad": "Facil"
     },
     { "id_enemigo": 16,
-      "nombre": "gárgola",
+      "nombre": "gargola",
       "dificultad": "Normal"
     },
     { "id_enemigo": 17,
-      "nombre": "serpiente acuática",
+      "nombre": "serpiente acuatica",
       "dificultad": "Facil"
     },
     { "id_enemigo": 19,
-      "nombre": "ángel caído",
+      "nombre": "angel caido",
       "dificultad": "Dificil"
     }
   ]
