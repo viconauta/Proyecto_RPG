@@ -26,8 +26,11 @@ public class JuegoController {
     @FXML private Label lblNombreEnemigo;
     @FXML private Label lblVidaEnemigo;
     @FXML private Label lblAtaqueEnemigo;
-    @FXML private ImageView imgEnemigo; // <-- Añadido ImageView
+    @FXML private ImageView imgEnemigo;
 
+    @FXML private Button btnAtacar; // <-- Añadido
+    @FXML private Button btnDefender; // <-- Añadido
+    @FXML private Button btnContinuar; // <-- Añadido para controlarlo
     @FXML private Button btnFinalizar;
 
 
@@ -55,6 +58,10 @@ public class JuegoController {
 
         if (salaIndex >= historia.getSalas().size()) {
             txtHistoria.setText("¡Has completado TODAS las salas!\nEres un campeón.");
+            btnAtacar.setDisable(true); // Desactivar botones si el juego termina
+            btnDefender.setDisable(true);
+            btnContinuar.setDisable(true);
+            btnFinalizar.setVisible(true);
             return;
         }
 
@@ -69,6 +76,12 @@ public class JuegoController {
 
         txtLog.clear();
         actualizarUI();
+
+        // Habilitar botones de combate al cargar una nueva sala
+        btnAtacar.setDisable(false);
+        btnDefender.setDisable(false);
+        btnContinuar.setDisable(true); // Continuar deshabilitado hasta derrotar al enemigo
+        btnFinalizar.setVisible(false);
     }
 
     private void actualizarUI() {
@@ -94,10 +107,10 @@ public class JuegoController {
     public void atacar() {
         if (!jugador.estaVivo()) {
             txtLog.appendText("Has muerto. Fin del juego.\n");
-
-            // Desactivar botones de combate
+            btnAtacar.setDisable(true);
+            btnDefender.setDisable(true);
+            btnContinuar.setDisable(true);
             btnFinalizar.setVisible(true);
-
             return;
         }
 
@@ -112,6 +125,11 @@ public class JuegoController {
             jugador.ganarExp(salaActual.getRecompensa());
             txtLog.appendText("Ganaste " + salaActual.getRecompensa() + " EXP.\n");
 
+            // Desactivar botones de combate y activar continuar
+            btnAtacar.setDisable(true);
+            btnDefender.setDisable(true);
+            btnContinuar.setDisable(false);
+
             return;
         }
 
@@ -120,6 +138,10 @@ public class JuegoController {
 
         if (!jugador.estaVivo()) {
             txtLog.appendText("Has muerto. Fin del juego.\n");
+            btnAtacar.setDisable(true);
+            btnDefender.setDisable(true);
+            btnContinuar.setDisable(true);
+            btnFinalizar.setVisible(true);
         }
 
         actualizarUI();
@@ -129,6 +151,9 @@ public class JuegoController {
     public void defender() {
         if (!jugador.estaVivo()) {
             txtLog.appendText("Has muerto. Fin del juego.\n");
+            btnAtacar.setDisable(true);
+            btnDefender.setDisable(true);
+            btnContinuar.setDisable(true);
             btnFinalizar.setVisible(true);
             return;
         }
@@ -142,6 +167,10 @@ public class JuegoController {
 
         if (!jugador.estaVivo()) {
             txtLog.appendText("Has muerto. Fin del juego.\n");
+            btnAtacar.setDisable(true);
+            btnDefender.setDisable(true);
+            btnContinuar.setDisable(true);
+            btnFinalizar.setVisible(true);
         }
 
         actualizarUI();
