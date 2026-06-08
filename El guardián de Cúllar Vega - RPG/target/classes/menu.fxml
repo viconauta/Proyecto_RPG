@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controladores.MenuController"
+            stylesheets="@estilos.css"
+            styleClass="menu-background">
+
+    <VBox spacing="25" alignment="CENTER" styleClass="menu-vbox"
+          AnchorPane.topAnchor="0" AnchorPane.rightAnchor="0"
+          AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0">
+
+        <Label text="El Guardián de Cúllar Vega" styleClass="label-title"/>
+
+        <Button text="Jugar" onAction="#jugar"/>
+        <Button text="Salir" onAction="#salir"/>
+    </VBox>
+
+</AnchorPane>
