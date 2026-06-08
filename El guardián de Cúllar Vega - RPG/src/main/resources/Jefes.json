@@ -1,0 +1,34 @@
+{
+  "jefes": [
+    {
+      "id_enemigo": 5,
+      "nombre": "rey cavernicola",
+      "TipoDificultad": "Dificil",
+      "habilidadEspecial": "AtaqueExtra"
+    },
+    {
+      "id_enemigo": 10,
+      "nombre": "reina aracnida",
+      "dificultad": "Normal",
+      "habilidadEspecial": "DefensaExtra"
+    },
+    {
+      "id_enemigo": 15,
+      "nombre": "lich supremo",
+      "dificultad": "Dificil",
+      "habilidadEspecial": "VidaExtra"
+    },
+    {
+      "id_enemigo": 18,
+      "nombre": "archimago corrupto",
+      "dificultad": "Dificil",
+      "habilidadEspecial": "AtaqueExtra"
+    },
+    {
+      "id_enemigo": 20,
+      "nombre": "leviatan abisal",
+      "dificultad": "Dificil",
+      "habilidadEspecial": "DefensaExtra"
+    }
+  ]
+}

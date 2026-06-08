@@ -1,0 +1,64 @@
+{
+  "enemigos": [
+    { "id_enemigo": 1,
+      "nombre": "criatura cavernicola",
+      "dificultad": "Facil"
+    },
+    { "id_enemigo": 2,
+      "nombre": "aracnido",
+      "dificultad": "Facil"
+    },
+    { "id_enemigo": 3,
+      "nombre": "no-muerto",
+      "dificultad": "Normal"
+    },
+    { "id_enemigo": 4,
+      "nombre": "espiritu",
+      "dificultad": "Normal"
+    },
+    { "id_enemigo": 6,
+      "nombre": "humanoide hostil",
+      "dificultad": "Normal"
+    },
+    { "id_enemigo": 7,
+      "nombre": "cultista",
+      "dificultad": "Normal"
+    },
+    { "id_enemigo": 8,
+      "nombre": "bestia voladora",
+      "dificultad": "Facil"
+    },
+    { "id_enemigo": 9,
+      "nombre": "mago oscuro",
+      "dificultad": "Dificil"
+    },
+    { "id_enemigo": 11,
+      "nombre": "gigante",
+      "dificultad": "Dificil"
+    },
+    { "id_enemigo": 12,
+      "nombre": "elemental de fuego",
+      "dificultad": "Dificil"
+    },
+    { "id_enemigo": 13,
+      "nombre": "constructo helado",
+      "dificultad": "Dificil"
+    },
+    { "id_enemigo": 14,
+      "nombre": "zombi",
+      "dificultad": "Facil"
+    },
+    { "id_enemigo": 16,
+      "nombre": "gargola",
+      "dificultad": "Normal"
+    },
+    { "id_enemigo": 17,
+      "nombre": "serpiente acuatica",
+      "dificultad": "Facil"
+    },
+    { "id_enemigo": 19,
+      "nombre": "angel caido",
+      "dificultad": "Dificil"
+    }
+  ]
+}

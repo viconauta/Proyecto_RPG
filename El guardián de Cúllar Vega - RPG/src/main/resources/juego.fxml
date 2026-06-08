@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controladores.JuegoController"
+            stylesheets="@estilos.css">
+
+    <top>
+        <Label text="Aventura RPG"
+               styleClass="label-title"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="15" alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Contenedor para Historia, Imagen y Stats (ahora un GridPane) -->
+            <GridPane hgap="20" vgap="15" alignment="CENTER" styleClass="panel-principal-juego">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="ALWAYS" percentWidth="50"/>
+                    <ColumnConstraints hgrow="ALWAYS" percentWidth="50"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints vgrow="SOMETIMES" percentHeight="50"/> <!-- Fila 0: Historia e Imagen -->
+                    <RowConstraints vgrow="SOMETIMES" percentHeight="50"/> <!-- Fila 1: Stats Jugador/Enemigo -->
+                </rowConstraints>
+
+                <!-- HISTORIA DE LA SALA (Fila 0, Columna 0) -->
+                <TextArea fx:id="txtHistoria"
+                          editable="false"
+                          wrapText="true"
+                          prefHeight="100" prefWidth="250"
+                          GridPane.columnIndex="0" GridPane.rowIndex="0"
+                          GridPane.halignment="LEFT" GridPane.valignment="TOP"
+                          styleClass="text-area-historia"/>
+
+                <!-- IMAGEN DEL ENEMIGO (Fila 0, Columna 1) -->
+                <ImageView fx:id="imgEnemigo" preserveRatio="true"
+                           fitWidth="300" fitHeight="300"
+                           GridPane.columnIndex="1" GridPane.rowIndex="0"
+                           GridPane.halignment="RIGHT" GridPane.valignment="TOP"
+                           styleClass="image-view-enemigo"/>
+
+                <!-- PANEL JUGADOR / ENEMIGO (Fila 1, abarcando 2 columnas) -->
+                <HBox spacing="40" alignment="CENTER"
+                      GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2"
+                      styleClass="panel-combate">
+
+                    <!-- JUGADOR -->
+                    <VBox spacing="5" alignment="CENTER_LEFT" styleClass="panel-stats">
+                        <Label text="Jugador" style="-fx-font-weight: bold;"/>
+                        <Label fx:id="lblVidaJugador" text="Vida: "/>
+                        <Label fx:id="lblAtaqueJugador" text="Ataque: "/>
+                    </VBox>
+
+                    <!-- ENEMIGO STATS -->
+                    <VBox spacing="5" alignment="CENTER_RIGHT" styleClass="panel-stats">
+                        <Label text="Enemigo" style="-fx-font-weight: bold;"/>
+                        <Label fx:id="lblNombreEnemigo" text="Nombre"/>
+                        <Label fx:id="lblVidaEnemigo" text="Vida: "/>
+                        <Label fx:id="lblAtaqueEnemigo" text="Ataque: "/>
+                    </VBox>
+
+                </HBox>
+            </GridPane>
+
+            <!-- LOG DEL COMBATE (Debajo del GridPane, centrado) -->
+            <TextArea fx:id="txtLog"
+                      editable="false"
+                      wrapText="true"
+                      prefHeight="80"
+                      styleClass="text-area-log"/>
+
+            <!-- BOTONES DE ACCIÓN (Debajo del Log, centrado) -->
+            <HBox spacing="20" alignment="CENTER">
+                <Button fx:id="btnAtacar" text="Atacar" onAction="#atacar"/>
+                <Button fx:id="btnDefender" text="Defender" onAction="#defender"/>
+                <Button fx:id="btnContinuar" text="Continuar" onAction="#continuar"/>
+                <Button text="Finalizar" onAction="#finalizar" fx:id="btnFinalizar" visible="false"/>
+            </HBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>
