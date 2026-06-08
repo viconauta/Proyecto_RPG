@@ -8,5 +8,6 @@ public class Ruta {
     public static final String RUTA_SALAS ="Salas.json";
     public static final String RUTA_ENEMIGO = "Enemigos.json";
     public static final String RUTA_JEFES = "Jefes.json";
+    public static final String RUTA_IMAGENES_ENEMIGOS = "img/";
 
 }

@@ -53,7 +53,7 @@ public class Enemigo extends Personaje {
     }
 
     public String getRutaEnemigo() {
-        return Ruta.RUTA_RESOURCES + this.id_enemigo + ".png";
+        return Ruta.RUTA_RESOURCES + Ruta.RUTA_IMAGENES_ENEMIGOS + this.id_enemigo + ".png";
     }
 
     //ToString

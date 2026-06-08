@@ -48,6 +48,21 @@
     -fx-background-color: -fx-control-inner-background;
 }
 
+/* Estilos específicos para el TextArea de historia */
+.text-area-historia {
+    -fx-control-inner-background: #1a1a1a; /* Un poco más claro que el general */
+    -fx-border-color: #555555;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 8, 0.3, 0, 0);
+}
+
+/* Estilos específicos para el TextArea del log de combate */
+.text-area-log {
+    -fx-control-inner-background: #0a0a0a; /* Más oscuro para el log */
+    -fx-border-color: #333333;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 10, 0.4, 0, 0);
+}
+
+
 /* ===========================
    PANELES (BLOQUES DE MAZMORRA)
    - Fondo semitransparente para crear capas.
@@ -62,6 +77,30 @@
     -fx-padding: 15;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 10, 0, 0, 2); /* Sombra para simular profundidad */
 }
+
+/* Estilo para el GridPane principal del juego */
+.panel-principal-juego {
+    -fx-background-color: transparent; /* El GridPane principal no necesita fondo propio */
+    -fx-border-color: transparent;
+    -fx-effect: none;
+}
+
+/* Estilo para el HBox de combate (jugador/enemigo) */
+.panel-combate {
+    -fx-background-color: rgba(40, 40, 40, 0.7); /* Un poco más claro para destacar */
+    -fx-border-color: #555555;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.9), 15, 0.5, 0, 3);
+}
+
+/* Estilo para los VBox de estadísticas */
+.panel-stats {
+    -fx-background-color: transparent; /* No necesitan fondo propio, lo heredarán del padre */
+    -fx-border-color: transparent;
+    -fx-effect: none;
+    -fx-padding: 0; /* Ya tienen padding del padre */
+}
+
 
 /* ===========================
    BOTONES (PLACAS METÁLICAS / RUNAS)
@@ -107,4 +146,23 @@
     -fx-effect: none;
     -fx-padding: 20;
     -fx-max-width: 450px; /* Ancho máximo para el contenido del menú */
+}
+
+/* ===========================
+   IMAGEN DEL ENEMIGO
+   =========================== */
+.image-view {
+    -fx-border-color: #444444; /* Borde sutil */
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0.1, 0, 1); /* Sombra discreta */
+    -fx-background-color: #111111; /* Fondo oscuro para el ImageView */
+    -fx-padding: 5;
+}
+
+.image-view-enemigo {
+    -fx-border-color: #ffcc00; /* Borde dorado para la imagen del enemigo */
+    -fx-border-width: 2;
+    -fx-background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para la imagen */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.9), 15, 0.6, 0, 5); /* Sombra más pronunciada */
+    -fx-padding: 10;
 }

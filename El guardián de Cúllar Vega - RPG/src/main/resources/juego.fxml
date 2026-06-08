@@ -3,6 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
@@ -11,34 +12,56 @@
 
     <top>
         <Label text="Aventura RPG"
-               style="-fx-font-size: 24px; -fx-font-weight: bold;"
+               styleClass="label-title"
                BorderPane.alignment="CENTER"/>
     </top>
 
     <center>
-        <VBox spacing="10">
+        <GridPane hgap="20" vgap="15" alignment="CENTER" styleClass="panel-principal-juego">
             <padding>
                 <Insets top="20" right="20" bottom="20" left="20"/>
             </padding>
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" percentWidth="50"/>
+                <ColumnConstraints hgrow="ALWAYS" percentWidth="50"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES" percentHeight="30"/> <!-- Fila 0: Historia e Imagen -->
+                <RowConstraints vgrow="SOMETIMES" percentHeight="30"/> <!-- Fila 1: Stats Jugador/Enemigo -->
+                <RowConstraints vgrow="SOMETIMES" percentHeight="20"/> <!-- Fila 2: Log de Combate -->
+                <RowConstraints vgrow="SOMETIMES" percentHeight="20"/> <!-- Fila 3: Botones -->
+            </rowConstraints>
 
-            <!-- HISTORIA DE LA SALA -->
+            <!-- HISTORIA DE LA SALA (Fila 0, Columna 0) -->
             <TextArea fx:id="txtHistoria"
                       editable="false"
                       wrapText="true"
-                      prefHeight="150"/>
+                      prefHeight="100" prefWidth="250"
+                      GridPane.columnIndex="0" GridPane.rowIndex="0"
+                      GridPane.halignment="LEFT" GridPane.valignment="TOP"
+                      styleClass="text-area-historia"/>
 
-            <!-- PANEL JUGADOR / ENEMIGO -->
-            <HBox spacing="20">
+            <!-- IMAGEN DEL ENEMIGO (Fila 0, Columna 1) -->
+            <ImageView fx:id="imgEnemigo" preserveRatio="true"
+                       fitWidth="300" fitHeight="300"
+                       GridPane.columnIndex="1" GridPane.rowIndex="0"
+                       GridPane.halignment="RIGHT" GridPane.valignment="TOP"
+                       styleClass="image-view-enemigo"/>
+
+            <!-- PANEL JUGADOR / ENEMIGO (Fila 1, abarcando 2 columnas) -->
+            <HBox spacing="40" alignment="CENTER"
+                  GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2"
+                  styleClass="panel-combate">
 
                 <!-- JUGADOR -->
-                <VBox spacing="5">
+                <VBox spacing="5" alignment="CENTER_LEFT" styleClass="panel-stats">
                     <Label text="Jugador" style="-fx-font-weight: bold;"/>
                     <Label fx:id="lblVidaJugador" text="Vida: "/>
                     <Label fx:id="lblAtaqueJugador" text="Ataque: "/>
                 </VBox>
 
-                <!-- ENEMIGO -->
-                <VBox spacing="5">
+                <!-- ENEMIGO STATS -->
+                <VBox spacing="5" alignment="CENTER_RIGHT" styleClass="panel-stats">
                     <Label text="Enemigo" style="-fx-font-weight: bold;"/>
                     <Label fx:id="lblNombreEnemigo" text="Nombre"/>
                     <Label fx:id="lblVidaEnemigo" text="Vida: "/>
@@ -47,21 +70,25 @@
 
             </HBox>
 
-            <!-- LOG DEL COMBATE -->
+            <!-- LOG DEL COMBATE (Fila 2, abarcando 2 columnas) -->
             <TextArea fx:id="txtLog"
                       editable="false"
                       wrapText="true"
-                      prefHeight="150"/>
+                      prefHeight="80"
+                      GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2"
+                      GridPane.halignment="CENTER" GridPane.valignment="CENTER"
+                      styleClass="text-area-log"/>
 
-            <!-- BOTONES DE ACCIÓN -->
-            <HBox spacing="20" alignment="CENTER">
+            <!-- BOTONES DE ACCIÓN (Fila 3, abarcando 2 columnas) -->
+            <HBox spacing="20" alignment="CENTER"
+                  GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2">
                 <Button text="Atacar" onAction="#atacar"/>
                 <Button text="Defender" onAction="#defender"/>
                 <Button text="Continuar" onAction="#continuar"/>
                 <Button text="Finalizar" onAction="#finalizar" fx:id="btnFinalizar" visible="false"/>
             </HBox>
 
-        </VBox>
+        </GridPane>
     </center>
 
 </BorderPane>

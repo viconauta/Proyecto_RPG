@@ -42,7 +42,7 @@ public class Historia  {
             this.enemigos.addAll(jefesTemp.jefes);
 
         } catch (FileNotFoundException e) {
-            System.out.println("No se encontro el archivo.");
+            System.out.println("No se encontró el archivo.");
         } catch (IOException e) {
             System.out.println("Archivo no encontrado");
         }

@@ -93,7 +93,7 @@ public class Sala {
     @Override
     public String toString() {
         return "Sala {" +
-                "\nDescripcion: '" + this.descripcion +
+                "\nDescripción: '" + this.descripcion +
                 "\nEnemigo: " + this.enemigo.getNombre() +
                 "\nCompletada: " + this.completada +
                 "\nRecompensa: " + this.recompensa +

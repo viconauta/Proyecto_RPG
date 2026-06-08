@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class JuegoController {
 
@@ -24,6 +26,7 @@ public class JuegoController {
     @FXML private Label lblNombreEnemigo;
     @FXML private Label lblVidaEnemigo;
     @FXML private Label lblAtaqueEnemigo;
+    @FXML private ImageView imgEnemigo; // <-- Añadido ImageView
 
     @FXML private Button btnFinalizar;
 
@@ -75,6 +78,16 @@ public class JuegoController {
         lblNombreEnemigo.setText(enemigoActual.getNombre());
         lblVidaEnemigo.setText("Vida: " + enemigoActual.getVida());
         lblAtaqueEnemigo.setText("Ataque: " + enemigoActual.getAtaque());
+
+        // Cargar la imagen del enemigo
+        try {
+            Image enemyImage = new Image(getClass().getResourceAsStream("/" + Ruta.RUTA_IMAGENES_ENEMIGOS + enemigoActual.getId() + ".png"));
+            imgEnemigo.setImage(enemyImage);
+        } catch (Exception e) {
+            System.err.println("Error cargando imagen del enemigo: " + enemigoActual.getId() + ".png" + e.getMessage());
+            // Puedes poner una imagen por defecto si falla la carga
+            // imgEnemigo.setImage(new Image(getClass().getResourceAsStream("/img/default_enemy.png")));
+        }
     }
 
     @FXML
