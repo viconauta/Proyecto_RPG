@@ -1,75 +1,110 @@
-/* ===========================
-   ESTILO GENERAL
-   =========================== */
+/* ==========================================================================
+   ESTILOS CSS PARA RPG DE MAZMORRA - ELEGANTE Y OSCURO (COMPATIBLE JAVAFX)
+   ========================================================================== */
 
+/* ===========================
+   FONDO Y FUENTE GENERAL
+   - Fondo oscuro con degradado sutil para simular profundidad.
+   - Tipografía legible y profesional.
+   =========================== */
 .root {
     -fx-font-family: "Segoe UI", sans-serif;
-    -fx-background-color: linear-gradient(to bottom, #1a1a1a, #000000);
-    -fx-text-fill: #e0e0e0;
+    -fx-background-color: linear-gradient(to bottom, #1c1c1c, #0a0a0a); /* Gris carbón a negro */
 }
 
 /* ===========================
-   TITULOS
+   ESTILO DE TEXTOS
+   - Labels normales en gris claro para legibilidad.
+   - Títulos en dorado suave con una sombra discreta para dar jerarquía.
    =========================== */
-
 .label {
-    -fx-text-fill: #e0e0e0;
+    -fx-text-fill: #e0e0e0; /* Gris claro, casi blanco */
 }
 
 .label-title {
-    -fx-font-size: 26px;
+    -fx-font-size: 28px;
     -fx-font-weight: bold;
-    -fx-text-fill: #ffcc00;
-    -fx-effect: dropshadow(gaussian, black, 6, 0.5, 0, 0);
+    -fx-text-fill: #ffcc00; /* Dorado suave */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.7), 5, 0.2, 0, 1); /* Sombra sutil */
 }
 
 /* ===========================
-   TEXTAREAS
+   TEXTAREAS (MURALES / PERGAMINOS)
+   - Fondo muy oscuro para integrarse.
+   - Borde discreto que no distrae.
    =========================== */
-
 .text-area {
-    -fx-control-inner-background: #111111;
+    -fx-control-inner-background: #111111; /* Negro/gris muy oscuro */
     -fx-text-fill: #e0e0e0;
-    -fx-border-color: #444444;
-    -fx-border-radius: 6;
-    -fx-background-radius: 6;
+    -fx-border-color: #444444; /* Borde gris oscuro */
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.text-area .content {
+    -fx-background-color: -fx-control-inner-background;
 }
 
 /* ===========================
-   BOTONES
+   PANELES (BLOQUES DE MAZMORRA)
+   - Fondo semitransparente para crear capas.
+   - Relleno y bordes suaves para definir el "bloque".
    =========================== */
-
-.button {
-    -fx-background-color: #333333;
-    -fx-text-fill: #ffcc00;
-    -fx-font-weight: bold;
-    -fx-padding: 10 20;
+.vbox, .hbox {
+    -fx-background-color: rgba(30, 30, 30, 0.6); /* Panel oscuro semitransparente */
     -fx-background-radius: 8;
     -fx-border-radius: 8;
-    -fx-border-color: #ffcc00;
-    -fx-border-width: 2;
+    -fx-border-color: #2c2c2c; /* Borde sutil para definir el panel */
+    -fx-border-width: 1;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 10, 0, 0, 2); /* Sombra para simular profundidad */
+}
+
+/* ===========================
+   BOTONES (PLACAS METÁLICAS / RUNAS)
+   - Estilo sobrio con fondo oscuro y texto dorado.
+   - Borde fino que simula un grabado.
+   =========================== */
+.button {
+    -fx-background-color: #333333; /* Gris oscuro metálico */
+    -fx-text-fill: #ffcc00; /* Texto dorado */
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #ffcc00; /* Borde dorado fino */
+    -fx-border-width: 1;
     -fx-cursor: hand;
-    -fx-effect: dropshadow(gaussian, black, 4, 0.4, 0, 0);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 4, 0.1, 0, 1);
 }
 
 .button:hover {
-    -fx-background-color: #555555;
-    -fx-scale-x: 1.05;
-    -fx-scale-y: 1.05;
+    -fx-background-color: #444444; /* Aclarar ligeramente */
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
 }
 
 .button:pressed {
-    -fx-background-color: #222222;
-    -fx-scale-x: 0.97;
-    -fx-scale-y: 0.97;
+    -fx-background-color: #222222; /* Oscurecer al presionar */
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
 }
 
 /* ===========================
-   PANEL DE INFORMACIÓN
+   ESTILOS ESPECÍFICOS DEL MENÚ
    =========================== */
+.menu-background {
+    -fx-background-color: linear-gradient(to bottom, #1c1c1c, #0a0a0a);
+}
 
-.hbox, .vbox {
-    -fx-background-color: rgba(255, 255, 255, 0.05);
-    -fx-background-radius: 10;
-    -fx-padding: 10;
+.menu-vbox {
+    -fx-background-color: transparent; /* El VBox del menú no necesita su propio fondo */
+    -fx-border-color: transparent;
+    -fx-effect: none;
+    -fx-padding: 20;
+    -fx-max-width: 450px; /* Ancho máximo para el contenido del menú */
 }
