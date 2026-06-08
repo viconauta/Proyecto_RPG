@@ -53,6 +53,15 @@ public class Sala {
         return this.enemigo;
     }
 
+    public String getDescripcion() {
+        return this.descripcion;
+    }
+
+    public String getHistoria() {
+        return this.historia;
+    }
+
+
     // Setters
     public void setCompletada(boolean c) {
         this.completada = c;

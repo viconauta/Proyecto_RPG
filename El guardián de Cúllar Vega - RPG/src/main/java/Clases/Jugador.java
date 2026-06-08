@@ -52,8 +52,8 @@ public class Jugador extends Personaje{
 
     public void subirNivel() {
         this.nivel++;
-        this.setVida(this.getVida() + 10);
-        this.setAtaque(this.getAtaque() + 10);
+        this.setVida(this.getVida() + 5);
+        this.setAtaque(this.getAtaque() + 4);
     }
 
 

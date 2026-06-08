@@ -1,9 +1,5 @@
-package main;
-import com.google.gson.Gson;
+package org;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controladores.JuegoController"
+            stylesheets="@estilos.css">
+
+    <top>
+        <Label text="Aventura RPG"
+               style="-fx-font-size: 24px; -fx-font-weight: bold;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- HISTORIA DE LA SALA -->
+            <TextArea fx:id="txtHistoria"
+                      editable="false"
+                      wrapText="true"
+                      prefHeight="150"/>
+
+            <!-- PANEL JUGADOR / ENEMIGO -->
+            <HBox spacing="20">
+
+                <!-- JUGADOR -->
+                <VBox spacing="5">
+                    <Label text="Jugador" style="-fx-font-weight: bold;"/>
+                    <Label fx:id="lblVidaJugador" text="Vida: "/>
+                    <Label fx:id="lblAtaqueJugador" text="Ataque: "/>
+                </VBox>
+
+                <!-- ENEMIGO -->
+                <VBox spacing="5">
+                    <Label text="Enemigo" style="-fx-font-weight: bold;"/>
+                    <Label fx:id="lblNombreEnemigo" text="Nombre"/>
+                    <Label fx:id="lblVidaEnemigo" text="Vida: "/>
+                    <Label fx:id="lblAtaqueEnemigo" text="Ataque: "/>
+                </VBox>
+
+            </HBox>
+
+            <!-- LOG DEL COMBATE -->
+            <TextArea fx:id="txtLog"
+                      editable="false"
+                      wrapText="true"
+                      prefHeight="150"/>
+
+            <!-- BOTONES DE ACCIÓN -->
+            <HBox spacing="20" alignment="CENTER">
+                <Button text="Atacar" onAction="#atacar"/>
+                <Button text="Defender" onAction="#defender"/>
+                <Button text="Continuar" onAction="#continuar"/>
+                <Button text="Finalizar" onAction="#finalizar" fx:id="btnFinalizar" visible="false"/>
+            </HBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>
